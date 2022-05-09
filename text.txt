@@ -1,1 +1,3 @@
 o lista de cumparaturi
+paine 
+cereale
