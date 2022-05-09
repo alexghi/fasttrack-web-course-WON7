@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 
 lapte/cereale
+=======
+o lista de cumparaturi
+paine 
+cereale
+>>>>>>> b22d33313d618205e831c5587accdb11248dc680
+test- Flavius
