@@ -1,0 +1,21 @@
+Am folosit urmatoarele comenzi:
+
+mkdir facultate
+mkdir semestrul1
+cd semestrul1
+mkdir intensiv
+type nul > olimpici.txt
+cd../
+cd../
+cd semestrul2
+type nul > studenti.txt
+cd../../
+mkdir mate-info
+cd mate-info
+mkdir semestrul1
+cd semestrul1
+type nul > studenti.txt
+cd../
+mkdir semestrul2
+cd semestrul2
+type nul > studenti.txt
