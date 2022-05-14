@@ -1,0 +1,53 @@
+C:\Users\Roxi\Desktop>mkdir facultate
+
+C:\Users\Roxi\Desktop>cd facultate
+
+C:\Users\Roxi\Desktop\facultate>mkdir mate-info
+
+C:\Users\Roxi\Desktop\facultate>mkdir engleza
+
+C:\Users\Roxi\Desktop\facultate>cd mate-info
+
+C:\Users\Roxi\Desktop\facultate\mate-info>mkdir semestrul1
+
+C:\Users\Roxi\Desktop\facultate\mate-info>mkdir semestrul2
+
+C:\Users\Roxi\Desktop\facultate\mate-info>cd semestrul1
+
+C:\Users\Roxi\Desktop\facultate\mate-info\semestrul1>type nul > studenti.txt
+
+C:\Users\Roxi\Desktop\facultate\mate-info\semestrul1>cd ../
+
+C:\Users\Roxi\Desktop\facultate\mate-info>cd semestrul2
+
+C:\Users\Roxi\Desktop\facultate\mate-info\semestrul2>type nul > studenti.txt
+
+C:\Users\Roxi\Desktop\facultate\mate-info\semestrul2>cd ../../
+
+C:\Users\Roxi\Desktop\facultate>cd engleza
+
+C:\Users\Roxi\Desktop\facultate\engleza>mkdir semestrul1
+
+C:\Users\Roxi\Desktop\facultate\engleza>cd semestrul1
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul1>mkdir intensiv
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul1>cd intensiv
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul1\intensiv>type nul > olimpici.txt
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul1\intensiv>cd ../../
+
+C:\Users\Roxi\Desktop\facultate\engleza>cd semestrul1
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul1>type nul > studenti.txt
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul1>cd ../
+
+C:\Users\Roxi\Desktop\facultate\engleza>mkdir semestrul2
+
+C:\Users\Roxi\Desktop\facultate\engleza>cd semestrul2
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul2>type nul > studenti.txt
+
+C:\Users\Roxi\Desktop\facultate\engleza\semestrul2>
