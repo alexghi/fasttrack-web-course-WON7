@@ -60,16 +60,30 @@ class Student {
         this.hobbies = hobbies;
         }
     greeting() {
-        return `Hello! My Name is <b> ${this.name} </b> and I am <b> ${this.age} </b>. I love <b>${this.hobbies}</b>. `;
+        return `Hello! My name is <b> ${this.name} </b> and I am <b> ${this.age} </b>. I love <b>${this.hobbies}</b>. `;
     }    
 }
 
+
+// var Bruce = new Student("Bruce", 21, ['singing', 'hiking']);
+var Bruce = new Student ({
+    name: "Bruce",
+    age: 21,
+    hobbies: 'singing'
+});
+Bruce.greeting();
+document.getElementById("test5").innerHTML = Bruce.greeting(Bruce.name, this.age, this.hobbies);
+
+var Luke = new Student("Luke", 21, ['singing', ' hiking']);
+console.log(Luke);
+Luke.greeting();
+document.getElementById("test6").innerHTML = Luke.greeting();
 
 
 //6. write a Teacher class that has a constructor with
 // name (will be a String), age (will be a Number)
 class Teacher {
-    constructor(name, age){
+    constructor({name, age}){
         this.name = name;
         this.age = age;    
     }
@@ -83,16 +97,28 @@ var Joe = new Teacher({
 //7. create two students (instances) of the class defined at 5
 // console log their greetings
 
-var Bruce = new Student ({
-    name: 'Bruce',
-    age: 19,
-    hobbies: ['hiking, ', 'reading, ', 'singing']
-})
-console.log(Bruce.greeting());
-document.getElementById("test5").innerHTML = Bruce.greeting();
 
+//=============
 
-var Luke = new Student("Luke", 21, [" singing", " hiking"]);
-console.log(Luke);
-console.log(Luke.greeting());
-document.getElementById("test6").innerHTML = Luke.greeting();
+class Book {
+    constructor({title, author, pubDate}) {
+    this.title = title;
+    this.author = author;
+    this.pubDate = pubDate;
+    }
+    greetings() {
+    // console.log(`
+    // Title: ${this.title}
+    // By: ${this.author}
+    // ${this.pubDate}
+    // `);
+    return `You should read "${this.title}", by ${this.author}, ${this.pubDate}.`
+    }
+    }
+    var YDKJS = new Book({
+    title: "You Don't Know JS",
+    author: "Kyle Simpson",
+    pubDate: "June 2014",
+    });
+    YDKJS.greetings();
+    document.getElementById("test7").innerHTML = YDKJS.greetings();
