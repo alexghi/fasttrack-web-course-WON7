@@ -2,10 +2,11 @@
 //1. Write a function that takes two numbers (a and b) as argument
 // Sum a and b
 // Return the result
-var myFunction = function (a, b) {
+var myFunction1 = function (a, b) {
     var sum = a + b;
     return sum;
 }
+console.log(myFunction1(3, 4));
 
 
 //2. Write a function that takes two values, say a and b, as arguments
@@ -16,6 +17,7 @@ var myFunction2 = function (a, b){
         return true;
     }
 }
+console.log(myFunction2(10, 10));
 
 
 //3. Write a function that takes a value as argument
@@ -24,12 +26,27 @@ var myFunction3 = function (a){
     return typeof a;
 }
 
+let apple = "apple";
+
+console.log(myFunction3(apple));
+
+// or console.log(`My ${apple} is a ${myFunction3(apple)}`);
+
+
+
 //4. write a function that takes as argument a number,
 // a string, and an object
 // display the values of the primitives (excluding the object)
 var myFunction4 = function (a, b, c){
     return [a, b];
 }
+
+var myObject = {
+    name: "Adam",
+    age: 21
+}
+
+console.log(myFunction4(13, "Clarissa", myObject));
 
 //5. write a Student class that has a constructor with
 // name (will be a String), age (will be a Number), hobbies (will be an Array of Strings) e.g. ["Music", "Travel"]
@@ -59,7 +76,7 @@ class Teacher {
     constructor(name, age){
         this.name = name;
         this.age = age;
-        return [name, age]
+        return {name, age};
     }
 }
 let teacher1 = new Teacher("Descartes", 45);
@@ -79,3 +96,6 @@ let student3 = new Student({
     age: 23,
     hobbies: ["mountain hiking", "family business", "Feodor Dostoievski"]
 });
+
+student2.greeting();
+student3.greeting();
