@@ -72,7 +72,8 @@ var Bruce = new Student ({
     hobbies: 'singing'
 });
 Bruce.greeting();
-document.getElementById("test5").innerHTML = Bruce.greeting(Bruce.name, this.age, this.hobbies);
+// !!! DIN PACATE, Bruce.greeting() nu imi apre in HTML cum trebuie. Nu pricep de ce.
+document.getElementById("test5").innerHTML = Bruce.greeting();
 
 var Luke = new Student("Luke", 21, ['singing', ' hiking']);
 console.log(Luke);
