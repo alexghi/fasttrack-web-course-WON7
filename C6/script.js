@@ -4,8 +4,8 @@ class Student {
         this.age = age
     }
 
-    greetings() {
-
+    setStudentName(newNameValue) {
+        this.studentName = newNameValue
     }
 
     getStudentName() {
@@ -17,17 +17,14 @@ class Student {
     }
 }
 
-
-
-
 const s1 = new Student("Alex")
 
-s1.getStudentName()
-s1.getAge()
+console.log(s1.getStudentName())
 
+console.log(s1)
+s1.setStudentName("Daniel")
 
-
-
+console.log(s1.getStudentName())
 
 
 const studentName = ["Sharleen Rollo", "Della Wally", "Ryana Ami", "Lydia Mercy", "Mikey Valorie", "Chester Lexie", "Danette Luanna", "Adalyn Goddard", "Johnnie Peta", "Natille Nigellus"] 
@@ -41,6 +38,3 @@ for(var i = 0; i < studentName.length; i++ ) {
 
 console.log(students)
 
-for(students ) {
-    console.log(student[i].greetings())
-}
