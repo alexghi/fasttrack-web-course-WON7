@@ -90,3 +90,5 @@ console.log(Teacher)
 // console log their greetings
 
 //!!!!!Am creat in plus 2 studenti la ex. 5 pt aceasta tema!!!!!!!!!!!!
+
+
