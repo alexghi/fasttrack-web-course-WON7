@@ -22,10 +22,12 @@ console.log(myFunction2(2, 2));
 //3. Write a function that takes a value as argument
 // Return the type of the value
 var myFunction3 = function (a) {
-  return a;
+  return typeof a;
 };
 
-console.log(myFunction3(typeof "keanu reeves"));
+let actor = "Keanu Reeves"
+
+console.log(myFunction3(actor))
 
 //4. write a function that takes as argument a number,
 // a string, and an object
