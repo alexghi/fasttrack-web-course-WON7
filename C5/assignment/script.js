@@ -22,12 +22,23 @@ var myFunction3 = function (a) {
   return typeof a;
 };
 
+console.log(myFunction3(3));
+console.log(myFunction3("Hello"));
+console.log(myFunction3([1, 2, 5, 7]));
+
 //4. write a function that takes as argument a number,
 // a string, and an object
 // display the values of the primitives (excluding the object)
 var myFunction4 = function (a) {
-  return;
+  if (typeof a === "string" || typeof a === "number") {
+    return a;
+  } else {
+    return "";
+  }
 };
+console.log(myFunction4("Hello World"));
+console.log(myFunction4(10));
+console.log(myFunction4([5]));
 
 //5. write a Student class that has a constructor with
 // name (will be a String), age (will be a Number), hobbies (will be an Array of Strings) e.g. ["Music", "Travel"]
@@ -62,6 +73,9 @@ class Teacher {
     this.age = age;
   }
 }
+
+let myTeacher = new Teacher("John", 26);
+console.log(myTeacher);
 
 //7. create two students (instances) of the class defined at 5
 // console log their greetings
