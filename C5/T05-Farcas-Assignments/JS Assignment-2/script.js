@@ -123,6 +123,3 @@ class Book {
     });
     YDKJS.greetings();
     document.getElementById("test7").innerHTML = YDKJS.greetings();
-
-
-    
