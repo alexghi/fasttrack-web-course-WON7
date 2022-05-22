@@ -13,7 +13,10 @@ var myFunction = function (a, b) {
 // Return true if the two values are equal and of the same type
 // Comparison operators, strict equality
 function myFunction2(a, b) {
-    return
+    return sum;
+    let a = 3
+    let b = 4
+    console.log(a == b)
 }
 // - Flavius update - nu stiu raspunsul - trebuie sa revad video-ul + recomandarea data(link youtube),nu prea am inteles nimic din JS
 
