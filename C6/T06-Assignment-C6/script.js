@@ -14,7 +14,7 @@ class student {
         return `${this.name}'hobby is ${this.hobbies}.`;
     }
     greetings() {
-        return `Hello, my name is ${this.name} and I’m ${this.age} of age. My hobby is ${this.hobbies}.`;
+        return `Hello, my name is <b>${this.name}</b> and I’m <b>${this.age}</b> of age. My hobby is <b>${this.hobbies}</b>.`;
     }
 
     getPhoneNo(){
@@ -50,18 +50,21 @@ for(i = 0; i < allStudents.length; i++) {
     })
     allStudents[i].hobbies = someHobbies[i];    
     console.log(allStudents[i].greetings()); 
+    document.getElementById("greetings").innerHTML += `${allStudents[i].greetings()} <br>`;
     console.log(allStudents[i].getHobbies());
 }
 
 for(let i = 0; i < allStudents.length; i++) {
     if(allStudents[i].hobbies == 'music' || allStudents[i].hobbies == 'books') {
         console.log(`${allStudents[i].name} is one of the students having ${allStudents[i].hobbies} as a hobby.`)
+        document.getElementById("hobby").innerHTML += `<b>${allStudents[i].name}</b> is one of the students having <b>${allStudents[i].hobbies}</b> as a hobby. <br>`;
     }
 }
 
 for(let i = 0; i < allStudents.length; i++) {
     if(allStudents[i].age == 24) {
         console.log(`${allStudents[i].name} is one of the students aged ${allStudents[i].age}.`)
+        document.getElementById("age").innerHTML += `<b>${allStudents[i].name}</b> is one of the students aged <b>${allStudents[i].age}</b>. <br>`;
     }
 }
 
