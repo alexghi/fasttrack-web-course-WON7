@@ -3,7 +3,7 @@ class student {
         this.name = name;
         this.age = age;
         this.phoneNumber = phoneNumber;
-        this.hobbies = hobbies;
+        // this.hobbies = hobbies;
     }
 
     setHobbies(myHobby) {
@@ -49,7 +49,7 @@ for(i = 0; i < allStudents.length; i++) {
         }
     })
     allStudents[i].hobbies = someHobbies[i];    
-    console.log(allStudents[i].greetings()); 
+    // console.log(allStudents[i].greetings()); 
     document.getElementById("greetings").innerHTML += `${allStudents[i].greetings()} <br>`;
     console.log(allStudents[i].getHobbies());
 }
@@ -83,11 +83,6 @@ for(let i = 0; i < allStudents.length; i++) {
 // for(i = 0; i < allStudents.length; i++){
 //     allStudents[i].setHobbies = someHobbies[i];
 // }
-
-
-// const someHobbies = ['sports', 'music', 'books', 'music', 'astronomy', 'travels', 'piano', 'pets', 'writing', 'books', 'books', 'food'];
-
-// allStudents[i].setHobbies()
 
 // for(i = 0; i < allStudents.length; i++) {
 //     allStudents[i].greetings();

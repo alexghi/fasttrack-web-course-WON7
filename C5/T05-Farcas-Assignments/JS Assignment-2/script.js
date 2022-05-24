@@ -54,7 +54,7 @@ document.getElementById("test4").innerHTML = myFunction4(num, str, obj);
 // name (will be a String), age (will be a Number), hobbies (will be an Array of Strings) e.g. ["Music", "Travel"]
 // create a method name `greeting` that returns the sentence: Hello my name is {name} and I'm {age}.
 class Student {
-    constructor(name, age, hobbies) {
+    constructor({name, age, hobbies}) {
         this.name = name;
         this.age = age;
         this.hobbies = hobbies;
@@ -75,7 +75,10 @@ Bruce.greeting();
 // !!! DIN PACATE, Bruce.greeting() nu imi apre in HTML cum trebuie. Nu pricep de ce.
 document.getElementById("test5").innerHTML = Bruce.greeting();
 
-var Luke = new Student("Luke", 21, ['singing', ' hiking']);
+var Luke = new Student({
+    name: "Luke", 
+    age: 21, 
+    hobbies: ['singing', ' hiking']});
 console.log(Luke);
 Luke.greeting();
 document.getElementById("test6").innerHTML = Luke.greeting();
