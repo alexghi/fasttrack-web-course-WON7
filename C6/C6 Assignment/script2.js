@@ -16,7 +16,6 @@ class Student {
 
  
 let studentName = new Student("Charlie", "0759615745", 22);
-
 console.log(studentName);
 
 
