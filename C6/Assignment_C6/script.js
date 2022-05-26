@@ -34,8 +34,6 @@ let hobbies = [["swimming" , "music"], ["skydiving" , "science"], ["programming"
 let allStudents = []
 
 
-
-
 for(i = 0 ; i<students.length ; i++){
     allStudents[i] = new Student(students[i], phone[i] , age[i] , hobbies[i]);
     console.log(allStudents[i]) 
