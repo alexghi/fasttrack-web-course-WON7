@@ -1,0 +1,21 @@
+<!-- 7. Write a JavaScript function that creates a table, accept row, column numbers from the user, and input row-column number as content (e.g. Row-0 Column-0) of a cell. -->
+<!-- bassically you will do a dynamic table, user will input row and cell numbers from prompt (so 2 prompts) -->
+<!-- HINT: use for loop to generate rows, inside for that generates the row create another for loop to generate cells -->
+<!-- extra points if odd rows have different color than the even ones -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Change the content of a cell</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="myTable" border="1"></table>
+    <form>
+      <input type="button" onclick="createTable()" value="Create the table" />
+    </form>
+  </body>
+</html>
