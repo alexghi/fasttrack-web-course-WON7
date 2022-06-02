@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+   width: 600px;
+   margin: 100px;
+   margin-left: 10cm ;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.prev, .next , .btnDownload{
+    width: 150px;
+    height: 30px;
+    font-size: 1em;
+    border-radius: 15px;
+    background-color: rgb(181, 196, 223);
+    font-size:large;
+   
+  
+}
+
+.prev:hover, .next:hover, .btnDownload:hover {
+    background-color: cyan;
+    cursor: pointer;
+}
+
+.info{
+    font-size: 1.3em;
+}
+
+.image {
+
+    width: 1200px;
+    height: 800px;
+    border-radius: 20px;
+
+}
