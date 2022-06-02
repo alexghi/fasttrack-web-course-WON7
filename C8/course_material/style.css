@@ -1,0 +1,12 @@
+.post-description {
+    color: teal;
+}
+
+
+p {
+    background-color: bisque;
+}
+
+p.description {
+    background-color: rgb(113, 79, 38);
+}
