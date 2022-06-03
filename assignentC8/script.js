@@ -12,7 +12,7 @@ const images = [
     'https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2145&q=80'
 ]
 
-const myImages = [
+let myImages = [
     {
         name: 'picture1',
         myCustomKey: 'aaa',
@@ -68,7 +68,7 @@ const myImages = [
 ]
 
 const firstImage = 1;
-const lastImage = images.length -1;
+const lastImage = images.length +0;
 let currentImage = 0;
 
 const nextBtn = document.getElementById('next');
@@ -80,7 +80,7 @@ nextBtn.addEventListener('click',()=>{
             currentImage = 0;
         }
         imageTag.src = images[currentImage];
-        document.getElementById('info').innerHTML = (currentImage +1) + '/10';
+        document.getElementById('info').innerHTML = (currentImage +1) + '/11';
 
 });
 
@@ -93,6 +93,7 @@ preBtn.addEventListener('click', ()=>{
         currentImage = 0;
     }
     imageTag.src = images[currentImage];
-    document.getElementById('info').innerHTML = (currentImage +1) + '/10';
+    document.getElementById('info').innerHTML = (currentImage +1) + '/11';
+
 
 });
