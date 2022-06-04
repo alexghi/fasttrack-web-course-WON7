@@ -4,8 +4,16 @@
   <head>
     <meta charset="utf-8" />
     <title>Paragraph exercise</title>
+    <script>
+      function myFunction(){
+        document.getElementById('text').style.backgroundColor = 'blue'
+      }
+    </script>
   </head>
   <body>
-    
+    <p id="text">This is a paragraph</p>
+    <div>
+      <button id="jsstyle" onclick="myFunction()">Style</button>
+    </div>
   </body>
 </html>

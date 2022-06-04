@@ -5,6 +5,25 @@
   <head>
     <meta charset="utf-8" />
     <title>Change the content of a cell</title>
+    <script>
+    
+      function changeContent() {
+        const row = prompt("number of rows");
+        const column = prompt("number of cells");
+        const table = document.getElementById('myTable');
+        if(row === "" || column === ""){
+          alert("Row and column inputs are required.")
+          return
+        }
+
+        if(row > table.rows.length || column > table.rows[row].cells.length){
+          alert("Invalid row or column.")
+          return
+
+        }
+        table.rows[row-1].cells[column-1].innerHTML = 'Betti'  
+      }
+    </script>
   </head>
   <body>
     <table id="myTable" border="1">

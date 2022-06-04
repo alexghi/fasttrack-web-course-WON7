@@ -6,6 +6,22 @@
   <head>
     <meta charset="utf-8" />
     <title>Change the content of a cell</title>
+    <script>
+      function createTable() {
+        const row = prompt("Number of rows", 1);
+        const column = prompt("Number of column", 1);
+        for (let r = 0; r < parseInt(row, 10); r++) {
+          var insertedRow = document.getElementById("myTable").insertRow(i);
+          if(r % 2 === 0) {
+            insertedRow.style.backgroundColor = "grey"
+          }
+          for (var c = 0; c < parseInt(column, 10); c++) {
+            var y = x.insertCell(c);
+            y.innerHTML = "Row-" + (r+1) + " Column-" + (c+1);
+          }
+        }
+      }
+    </script>
     <style type="text/css">
       body {
         margin: 30px;
