@@ -1,4 +1,5 @@
-<!-- 4. Here is a sample html file with a submit button. Write a JavaScript function to get the value of the href, hreflang, rel, target, and type attributes of the specified link  -->
+<!-- 4. Here is a sample html file with a submit button. Write a JavaScript function to get the value of the href, hreflang, rel, target, 
+  and type attributes of the specified link  -->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -18,5 +19,23 @@
     <button onclick="getAttributes()">
       Click here to get attributes value
     </button>
+
+    <script>
+
+      const getAttributes = ()=> {
+        let a = document.getElementById('w3r').getAttribute('href');
+        alert('The value of href is : ' + a);
+
+        let b = document.getElementById('w3r').getAttribute('hreflang');
+        alert('The value of hreflang : ' + b);
+
+        let c = document.getElementById('w3r').getAttribute('rel')
+        alert('The value of rel is: ' + c);
+
+        let d = document.getElementById('w3r').getAttribute('target');
+        alert('The value of target is : ' + d);
+      }
+
+    </script>
   </body>
 </html>
