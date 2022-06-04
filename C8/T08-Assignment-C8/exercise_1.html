@@ -1,0 +1,28 @@
+<!-- 1. Here is a sample html file with a submit button.
+     Now modify the style of the paragraph text 
+     through javascript code.  
+    -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS DOM paragraph style / T08-Assignment-C8</title>
+  </head>
+  <body>
+    <p id="text">JavaScript Exercises - w3resource</p>
+    <div>
+      <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+
+    <script>
+        let js_style = () => content.style = `
+        color: red;
+        background-color: grey;
+        font-size: 3em
+        `
+
+        let content = document.querySelector("#text");
+        let myButton = document.querySelector("#jsstyle");
+        myButton.addEventListener("click", js_style);
+    </script>
+  </body>
+</html>

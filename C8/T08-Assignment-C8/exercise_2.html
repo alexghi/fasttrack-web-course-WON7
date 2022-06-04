@@ -1,0 +1,52 @@
+<!-- 2. Write a JavaScript function to get the values of 
+  First and Last name of the following form.
+    -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Return first and last name from a form - w3resource / T08-Assignment-C8</title>
+  </head>
+  <body>
+    <form id="form1" onsubmit="getFormvalue()">
+      First name: <input id="fn" type="text" name="fname" value="David" /><br />
+      Last name: <input id="ln" type="text" name="lname" value="Beckham" /><br />
+      <input id="myButton" type="submit" value="Submit" onclick="getName()"/>
+    </form>
+    <h3 id="display"></h3>
+
+
+    <script>
+      // var getFormvalue = () => {
+      //   var firstName = document.querySelector("#fn").value;
+      //     console.log(firstName)
+      //  var lastName = document.querySelector("#ln").value;
+      //      console.log(lastName);
+       
+      //   return `${firstName} ${lastName}`;
+      // // }
+      // var form1 = document.getElementById("form1");
+      //  form1.addEventListener('onsubmit', getFormvalue);
+      var firstName = document.querySelector("#fn").value;
+          console.log(firstName)
+      var lastName = document.querySelector("#ln").value;
+           console.log(lastName);
+      getFormvalue = () => {
+        let fullName = `${firstName} ${lastName}`;
+        return fullName;
+      }
+      console.log(getFormvalue())
+      form1.addEventListener('onsubmit', getFormvalue);
+      var form1 = document.getElementById("form1");
+
+      var messageDisplay = document.querySelector("#display");
+           console.log(messageDisplay);     
+      var myButton = document.querySelector("#myButton");
+      let getName = () => {
+        document.getElementById("display").innerHTML = `You are ${fullName} ${firstName} ${lastName}`;
+      }     
+      console.log(getName());
+      myButton.addEventListener('onclick', getName);
+
+    </script>
+  </body>
+</html>

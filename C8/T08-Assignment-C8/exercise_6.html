@@ -1,0 +1,64 @@
+<!-- 6. Write a JavaScript function that accept row, column, (to identify a particular cell) and a string to update the content of that cell. -->
+<!-- HINT: use prompt to allow user to input row number and cell number -->
+<!-- parse the results from prompt to ensure you're checking the row number index as number and the column number index and modify that column number content  -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Change the content of a cell / T08-Assignment-C8</title>
+  </head>
+  <body>
+    <table id="myTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+      </tr>
+    </table>
+    <form>
+      <input type="button" onclick="changeContent()" value="Change content" />
+    </form>
+    <div style="display:flexbox; flex-direction: column;">
+      <div>
+        <label for="row">Insert a row number:</label>
+        <input id="rI" type="text" name="row" style="width:250px; margin-left: 25px; margin-top: 5px;" placeholder="Numărul rândului pe care vrei să îl modifici">  
+      </div>
+      <div>
+        <label for="column">Insert a column number:</label>
+        <input id="cI" type="text" name="column" style="width:250px; margin-top: 5px;" placeholder="Numărul coloanei pe care vrei să o modifici">
+      </div>
+      <div>
+        <label for="newText">Insert a column number:</label>
+        <input id="tI" type="text" name="newText" style="width:250px; margin-top: 5px;" placeholder="Introdu datele">
+      </div>
+    </div>
+    
+    <script>
+    // 6. Write a JavaScript function that accept row,
+    // column, (to identify a particular cell) and a string to
+    // update the content of that cell.
+
+    function changeContent() {
+      let rowInfo = document.querySelector("#rI").value;
+      let cellInfo = document.querySelector("#cI").value;
+      let textInfo = document.querySelector("#tI").value;
+          console.log(rowInfo, cellInfo, textInfo)
+      let row = document.getElementsByTagName("tr");
+      // let column = document.getElementsByTagName("td");
+
+      var myInfo=document.getElementById('myTable').rows[parseInt(rowInfo,3)].cells;
+      myInfo[parseInt(cellInfo,2)].innerHTML=textInfo;
+
+   }
+
+
+
+    </script>
+  </body>
+</html>

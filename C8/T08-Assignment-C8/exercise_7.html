@@ -1,0 +1,79 @@
+<!-- 7. Write a JavaScript function that creates a table, accept row, column numbers from the user, and input row-column number as content (e.g. Row-0 Column-0) of a cell. -->
+<!-- bassically you will do a dynamic table, user will input row and cell numbers from prompt (so 2 prompts) -->
+<!-- HINT: use for loop to generate rows, inside for that generates the row create another for loop to generate cells -->
+<!-- extra points if odd rows have different color than the even ones -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Change the content of a cell / T08-Assignment-C8</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="myTable" border="1"></table>
+    <form>
+      <input type="button" onclick="createTable()" value="Create the table" />
+    </form>
+
+    <script>
+    // 7. Write a JavaScript function to add rows to a table.
+    // or 7. Write a JavaScript function to create a table. ?????
+
+    // FUNCTIA ANTETUL TABELULUI (functia este apelata imediat)
+    function createTableHeading() {
+        var table = document.querySelector("#myTable");
+        var tableHead = document.createElement('thead');
+        tableHead.style = `
+        border: 1px solid black;
+        background-color: rgb(194, 214, 214);
+      `      
+      table.appendChild(tableHead);   
+      var tableRow1 = document.createElement('tr');
+      tableHead.appendChild(tableRow1);      
+      var tableRow1Heading1 = document.createElement('th');
+      tableRow1Heading1.innerHTML = "<b>TABLE HEADING #1 </b>";
+      var tableRow1Heading2 = document.createElement('th');
+      tableRow1Heading2.innerHTML = "<b>TABLE HEADING #2 </b>";
+      tableRow1.appendChild(tableRow1Heading1);
+      tableRow1.appendChild(tableRow1Heading2);
+    }
+    createTableHeading()
+
+    // FUNCTIA CARE GENEREAZA RANDURILE (functia este apelata de evenimentul 'onclick')
+    function createTable() {
+      var table = document.querySelector("#myTable");
+      table.style = `
+          width: auto;
+          border: 1px solid black;
+          background-color: white;
+          padding: 30px;
+          border-collapse: collapse;
+      `
+      // CREAM tableBody
+      var tableBody = document.createElement('tbody');
+      tableBody.style = `
+        border: 1px solid black;
+        background-color: white;
+        font-weight: normal;
+      `
+      table.appendChild(tableBody);
+    // CREAM tableRow
+      var tableRow = document.createElement('tr');
+      tableRow.style = `
+        font-weight: normal;
+      `
+      table.appendChild(tableRow);
+    // POPULAM tabelul cu un sablon de date 
+      var tableRowData1 = document.createElement('th');
+      tableRowData1.innerHTML = "something1";
+      var tableRowData2 = document.createElement('th');
+      tableRowData2.innerHTML = "something2";
+      tableRow.appendChild(tableRowData1);
+      tableRow.appendChild(tableRowData2);               
+    }
+    </script>
+  </body>
+</html>

@@ -14,7 +14,7 @@ class student {
         return `${this.name}'hobby is ${this.hobbies}.`;
     }
     greetings() {
-        return `Hello, my name is <b>${this.name}</b> and I’m <b>${this.age}</b> of age. My hobby is <b>${this.hobbies}</b>.`;
+        return `Hello, my name is <b>${this.name}</b> and I am <b>${this.age}</b> of age. My hobby is <b>${this.hobbies}</b>.`;
     }
 
     getPhoneNo(){

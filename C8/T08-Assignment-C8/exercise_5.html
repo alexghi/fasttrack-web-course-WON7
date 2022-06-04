@@ -1,0 +1,65 @@
+<!-- 5. Write a JavaScript function to add rows to a table. -->
+<!-- HINT: use insertRow() -->
+<!-- reference: https://www.w3schools.com/jsref/met_table_insertrow.asp  -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Insert row in a table - w3resource / T08-Assignment-C8</title>
+  </head>
+  <body>
+    <table id="sampleTable" border="1">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+    </table>
+    <br />
+    <input id="myB5" type="button" onclick="insert_Row()" value="Insert row" />
+  </body>
+
+
+  <script>
+   // 5. Write a JavaScript function to add rows to a table.
+  
+  function insert_Row () {
+    // var myTable = document.querySelector("#sampleTable");
+    var myTable = document.getElementById("sampleTable")
+    var myRow = myTable.insertRow();
+    var myCellL = myRow.insertCell(0);
+    var myCellR = myRow.insertCell(1);
+    myCellL.innerHTML = `Row${CountRows()} cell1`;
+    myCellR.innerHTML = `Row${CountRows()} cell2`;
+
+     function CountRows() {
+                var myTable = document.getElementById("sampleTable")
+                var totalRowCount = 0;
+                var rowCount = 0;
+                var rows = myTable.getElementsByTagName("tr")
+                for (var i = 0; i < rows.length; i++) {
+                    totalRowCount++;
+                    if (rows[i].getElementsByTagName("td").length > 0) {
+                        rowCount++;
+                    }
+                }
+                return totalRowCount; 
+          }
+          console.log(CountRows())
+
+
+    // const tableObject = document.getElementById(tableId);
+  //  const rowCount = myTable[1].childElementCount;
+
+          
+  
+  //  document.querySelector('#sampleTable').appendChild(row);
+  // let myB5 = document.getElementById("myB5");
+  // myB5.addEventListener('click', insert_Row);
+  }
+
+
+  </script>
+</html>
