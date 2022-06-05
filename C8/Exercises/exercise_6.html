@@ -24,21 +24,8 @@
     <form>
       <input type="button" onclick="changeContent()" value="Change content" />
     </form>
-
     <script>
-      const changeContent = () => {
-        const rn = window.prompt("Input number of rows", 1);
-        const cn = window.prompt("Input number of columns", 1);
-
-        for (let i = 0; i < parseInt(rn, 10); r++) {
-          let x = document.getElementById("myTable").insertRow(r);
-
-          for (let b = 0; b < parseInt(cn, 10); c++) {
-            let y = x.insertCell(c);
-            y.innerHTML = "Row-" + r + "Column-" + c;
-          }
-        }
-      };
+     
     </script>
   </body>
 </html>

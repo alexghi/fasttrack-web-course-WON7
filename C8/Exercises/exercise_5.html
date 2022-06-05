@@ -21,17 +21,20 @@
 
     <br />
     <input type="button" onclick="insert_Row()" value="Insert row" />
+    <input type="button" onclick="delete_Row()" value="Delete row" />
 
     <script>
       const insert_Row = () => {
-        let table = document.getElementById("sampleTable");
-        let row = table.insertRow(0);
+        var table = document.getElementById("sampleTable");
+        var row = table.insertRow(0);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = "New cell1";
+        cell2.innerHTML = "New cell2";
+      };
 
-        let cell1 = row.insertCell(0);
-        let cell2 = row.insertCell(1);
-
-        cell1.innerHTML = "NEW Cell 1";
-        cell2.innerHTML = "NEW Cell 2";
+      const delete_Row = () => {
+        document.getElementById("sampleTable").deleteRow(0);
       };
     </script>
   </body>

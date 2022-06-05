@@ -14,14 +14,11 @@
     </div>
 
     <script>
-
-      document.getElementById('text').style.color = 'aquamarine';
-      document.getElementById('text').style.font = "30";
-
-      document.getElementById('jsstyle').style.color = "blue";
-      document.getElementById('jsstyle').style.font = "24";
-      
-
+      const js_style = () => {
+        const change = (document.getElementById("text").style.color =
+          "magenta");
+        alert("The color of the paragraph has now changed to " + change);
+      };
     </script>
   </body>
 </html>

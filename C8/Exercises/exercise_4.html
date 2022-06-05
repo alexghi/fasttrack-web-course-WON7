@@ -21,21 +21,21 @@
     </button>
 
     <script>
+      const getAttributes = () => {
+        const href = document.getElementById("w3r").getAttribute("href");
+        alert("The value of the href attribute is : " + href);
 
-      const getAttributes = ()=> {
-        let a = document.getElementById('w3r').getAttribute('href');
-        alert('The value of href is : ' + a);
+        const hrefLang = document
+          .getElementById("w3r")
+          .getAttribute("hreflang");
+        alert("The value of the hreflang attribute is : " + hrefLang);
 
-        let b = document.getElementById('w3r').getAttribute('hreflang');
-        alert('The value of hreflang : ' + b);
+        const rel = document.getElementById("w3r").getAttribute("rel");
+        alert("The value of the rel attribute is : " + rel);
 
-        let c = document.getElementById('w3r').getAttribute('rel')
-        alert('The value of rel is: ' + c);
-
-        let d = document.getElementById('w3r').getAttribute('target');
-        alert('The value of target is : ' + d);
-      }
-
+        const target = document.getElementById("w3r").getAttribute("target");
+        alert("The value of the target attribute is : " + target);
+      };
     </script>
   </body>
 </html>

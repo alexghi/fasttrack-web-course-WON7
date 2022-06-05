@@ -12,19 +12,12 @@
       Last name: <input type="text" name="lname" value="Beckham" /><br />
       <input type="submit" value="Submit" />
     </form>
-
     <script>
-
-      // Nu inteleg de ce imi da valoarea null
-      
-      const getFormvalue = ()=> {
-        let a = document.getElementById("form1").getAttribute('fname');
-        let b = document.getElementById('form1').getAttribute('lname')
-        console.log(a + " " + b)
-      }
-
-      getFormvalue();
-        
+      const getFormvalue = () => {
+        const fname = document.getElementById("form1").fname.value;
+        const lname = document.getElementById("form1").lname.value;
+        alert("My name is " + fname + " " + lname);
+      };
     </script>
   </body>
 </html>
