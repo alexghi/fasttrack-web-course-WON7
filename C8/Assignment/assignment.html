@@ -8,8 +8,18 @@
 </head>
 <body>
     <div class="main-container">
-        <div></div>
-    </div>
+        <img id="picture" src ="" onclick="showPictureInfo()" 
+        width="500px" height="500px"/>
+        <div id="showContent" hidden> 
+          <p id="name"></p>
+          <p id="description"></p>
+          <button onclick="downloadImage()">Download</button>
+        </div>
+        <button onclick="previousPicture()">Previous</button>
+        <span id="counter"></span>
+        <button onclick="nextPicture()">Next</button>
+        <button onclick="downloadPicture()">Download</button>
+      </div>
 </body>
 <script src="./script.js"></script>
 </html>
