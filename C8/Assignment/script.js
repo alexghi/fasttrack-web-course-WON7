@@ -81,7 +81,7 @@ function nextFoto () {
       counterImg = 0;
   }
   updateElements();
-  hideFoto();
+  // hideFoto();
 }
 
 function previousFoto () {
@@ -90,12 +90,16 @@ function previousFoto () {
       counterImg = images.length - 1;
   }
   updateElements();
-  hideFoto();
+  // hideFoto();
 }
+
+setTimeout(() => {
+  document.getElementById('picture').src = images[0].url;
+  }, 1000)
 
 
 function updateElements () {
-  document.getElementById('picture').src = images[counterImg].link;
+  document.getElementById('picture').src = images[counterImg].url;
   document.getElementById('counter').innerText = `${counterImg+1} / ${images.length}`
 }
 
