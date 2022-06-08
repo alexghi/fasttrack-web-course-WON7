@@ -1,0 +1,13 @@
+.main-container {
+    display: block;
+
+}
+
+#picture{
+    width: 700px;
+    height: 600px;
+    
+}
+.hidden{
+    display: none;
+}
