@@ -1,6 +1,6 @@
 * {
   text-align: center;
-  background: linear-gradient(90deg, rgba(182,242,216,1) 0%, rgba(57,218,198,1) 22%, rgba(8,177,130,1) 100%);
+  background: linear-gradient(90deg, rgba(182, 242, 216, 1) 0%, rgba(57, 218, 198, 1) 22%, rgba(8, 177, 130, 1) 100%);
 }
 
 button {
@@ -20,13 +20,13 @@ button:hover {
   background-color: #04aa6d;
 }
 
-span{
+span {
   font-weight: bold;
 }
 
-#showContent{
+#showContent {
   font-size: 14px;
-  font-family: arial,sans-serif;
+  font-family: arial, sans-serif;
   font-weight: 600;
 }
 
@@ -34,6 +34,6 @@ span{
   margin-top: 50px;
   weight: 500px;
   height: 500px;
-  border-radius: 20px;
-  box-shadow: 10px;
+  border-radius: 30px;
+  box-shadow: 20px 22px 5px 0px rgba(121, 122, 122, 0.75);
 }
