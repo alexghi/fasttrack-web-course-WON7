@@ -95,7 +95,7 @@ function previousFoto () {
 
 
 function updateElements () {
-  document.getElementById('picture').src = images[counterImg].link;
+  document.getElementById('picture').src = images[counterImg].url;
   document.getElementById('counter').innerText = `${counterImg+1} / ${images.length}`
 }
 
