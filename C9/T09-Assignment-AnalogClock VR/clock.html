@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="./clock.css" />
+    <script defer async src="./clock.js"></script>
+  </head>
+  <body>
+    <div class="bigbox position">
+      <div class="clock-ctn position">
+        <div class="clock-number num12"><div class="">12</div></div>
+        <div class="clock-number num3"><div class="">3</div></div>
+        <div class="clock-number num6"><div class="">6</div></div>
+        <div class="clock-number num9"><div class="">9</div></div>
+        <!-- <div class="markers position cardinal" id="m-12-6"></div> -->
+        <div class="markers position" id="m-1-7"></div>
+        <div class="markers position" id="m-2-8"></div>
+        <!-- <div class="markers position cardinal" id="m-3-9"></div> -->
+        <div class="markers position" id="m-4-10"></div>
+        <div class="markers position" id="m-5-11"></div>
+        <div class="clock-face position">
+          <div class="clock-hand position hour"></div>
+          <div class="clock-hand position minute"></div>
+          <div class="clock-hand position second"></div>
+          <div class="dot position"></div>
+        </div>
+      </div>
+      
+      <div class="dateDiv" >
+        <p class="current-day-in-week" style="z-index: -1; font-size: 20px; text-align: center; font-variant-caps: petite-caps; letter-spacing: 3px; font: small-caps bold 12px/30px Georgia, serif;">Data</p>
+        <p class="current-day" style="z-index: -1; font-size: 20px; text-align: center; font-variant-caps: petite-caps; letter-spacing: 3px; font: small-caps bold 12px/30px Georgia, serif;">Data</p>
+      </div>
+    </div>
+    
+  </body>
+</html>
