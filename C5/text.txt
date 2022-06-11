@@ -1,0 +1,25 @@
+1. mkdir facultate   // imi creeaza folderul
+2. cd facultate      // intra in folder 
+3. mkdir mate-info
+4. mkdir engleza
+5. cd mate-info
+6. mkdir semestrul1
+7. mkdir semestrul2
+8. cd semestrul1
+9. echo This is sample text > studenti.txt    // creeaza .txt
+10. cd ..  // iesire din semestru 1 cu 
+11. cd semestrul2
+12. cd ..
+13. cd ..
+14. cd engleza
+15. mkdir semestrul1
+16. mkdir semestrul2
+17. cd semestrul1
+18. mkdir intensiv 
+19. cd intensiv 
+20. echo This is sample text > olimpici.txt
+21. cd ..
+22. echo This is sample text > studenti.txt
+23. cd ..
+24. cd semestrul2
+25. echo This is sample text > studenti.txt
