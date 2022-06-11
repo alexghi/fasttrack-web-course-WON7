@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C8 Carousel Homework</title>
+    <script defer async src="script.js"></script>
+    <link rel="stylesheet" href="slideshow.css">
+</head>
+<body>
+    <div class="main-container">
+            <img id="currentImage" onclick="imageDetails()" src="https://images.unsplash.com/photo-1565711561500-49678a10a63f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80" alt="Imaginea este plecată la fotograf">
+            <div id="info">
+                <p id="picName" class="hide"></p>
+                <p id="picDescription" class="hide"></p>
+                <button id="picDownload" class="hide" onclick="downloadImage()">DOWNLOAD</button>
+            </div>
+            <div id="permanent">
+                <button id="previous" onclick="previousImage()">PREV</button> 
+                <p id="imageNo">1 / 11</p>   
+                <button id="next" onclick="nextImage()">NEXT</button>
+            </div>
+    </div>
+</body>
+</html>
