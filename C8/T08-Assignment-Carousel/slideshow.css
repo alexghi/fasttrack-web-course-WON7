@@ -1,0 +1,57 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(241, 235, 235);
+    padding: 5px;
+}
+
+#currentImage {
+    color:bisque;
+    background-color: rgb(109, 102, 102);
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 	rgb(23, 79, 79);
+}
+
+#info {
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 90px;
+    height: 70px;
+}
+
+#permanent {
+    background-color: rgb(241, 235, 235);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 600px;
+    border-radius: 5px;
+}
+
+#previous, #next, #imageNo {
+    margin: 25px;
+}
+
+#info {
+    height: 50px;
+}
+
+#picDownload {
+    background-color: black;
+    color:white;
+    margin-bottom: 30px;
+    border-radius: 5%;
+    padding: 5px;
+}
+
+.hide {
+    visibility: hidden;
+}
