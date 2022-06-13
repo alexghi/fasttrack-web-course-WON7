@@ -7,6 +7,7 @@
     <title>Analog Clock</title>
     <link rel="stylesheet" href="./clock.css" />
     <script defer async src="./clock.js"></script>
+    <!-- <script defer async src="./timer.js"></script> -->
   </head>
   <body>
     <div class="bigbox position">
@@ -30,10 +31,24 @@
       </div>
       
       <div class="dateDiv" >
-        <p class="current-day-in-week" style="z-index: -1; font-size: 20px; text-align: center; font-variant-caps: petite-caps; letter-spacing: 3px; font: small-caps bold 12px/30px Georgia, serif;">Data</p>
-        <p class="current-day" style="z-index: -1; font-size: 20px; text-align: center; font-variant-caps: petite-caps; letter-spacing: 3px; font: small-caps bold 12px/30px Georgia, serif;">Data</p>
+        <p class="current-day-in-week" style="z-index: -1; font-size: 20px; text-align: center; font-variant-caps: petite-caps; letter-spacing: 3px; font: small-caps bold 12px/30px Georgia, serif;"></p>
+        <p class="current-day" style="z-index: -1; font-size: 20px; text-align: center; font-variant-caps: petite-caps; letter-spacing: 3px; font: small-caps bold 12px/30px Georgia, serif;"></p>
+      </div>
+
+      <div id="timer">
+        <div id="timerDisplay">
+          <p id="timerOutput">0:0:0</p>
+        </div>
+        <div id="button">
+          <input id="resetButton" type="button" value="CLOCK" onclick="clockRotating()">
+          <input id="timerButton" type="button" value="TIMER" onclick="clockStop()">
+          <input id="timerButton" type="button" value="STOP" onclick="timerStop()">
+          <input id="resetButton" type="button" value="RESET" onclick="timerReset()">
+        </div>
       </div>
     </div>
+    
+    
     
   </body>
 </html>

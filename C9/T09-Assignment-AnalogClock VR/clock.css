@@ -25,7 +25,7 @@ body {
   position: relative;
   background-color: #091921;
   color:#e3e7e9;
-  top: 90px;
+  top: 170px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .clock-ctn {
@@ -192,3 +192,30 @@ body {
     text-decoration: .1em #091921 underline;
     color: #091921;
   } */
+
+
+
+#timer {
+  position: relative;
+  /* background-color: #bec6ca; */
+  color:#243e4b;
+  top: 300px;
+  font-family: Arial, Helvetica, sans-serif, #243e4b;
+  font-weight: bolder;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#resetButton, #timerButton {
+  color: grey; 
+  background-color:rgb(255, 236, 236); 
+  width: 70px; 
+  height: 25px; 
+  border-radius: 7%;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif, #243e4b;
+  font-weight: bolder;
+}
