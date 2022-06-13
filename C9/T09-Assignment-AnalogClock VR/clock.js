@@ -38,21 +38,18 @@ var seconds = 0;
 function timerOn() {
     seconds++;
     console.log(seconds)
+   
     const mySeconds = seconds / 60;
-    const myDigitalSeconds = seconds;
-    const myMinutes = Math.floor(seconds / 60);
+    const myMinutes = Math.floor(seconds / 3600);
     const myHours = Math.floor(seconds / 3600);
-    
+    console.log('minutele ', myMinutes)
     secondHand.style.transform = "rotate(" + mySeconds * 360 + "deg)";
     minHand.style.transform = "rotate(" + myMinutes * 360 + "deg)";
     hourHand.style.transform = "rotate(" + myHours * 360 + "deg)";
     console.log('aici', mySeconds, myMinutes)
+    console.log('tot aici', mySeconds, myMinutes)
     
-    document.querySelector("#timerOutput").innerHTML = `${myHours}:${myMinutes}:${Math.floor(seconds)}`;
-    // secondHand.style.transform = "rotate(" + getSeconds * 360 + "deg)";
-    // document.getElementById("timerOutputSec").innerHTML = seconds;
-
-   
+    document.querySelector("#timerOutput").innerHTML = `${myHours}:${myMinutes}:${Math.floor(seconds)}`;   
 }
 const myTimerInterval = setInterval(timerOn, 1000);
 
