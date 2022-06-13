@@ -1,0 +1,5 @@
+mkdir - se foloseste pentru a crea un folder
+mkdir -p -se foloseste pentru a crea mai multe foldere dintr-o data
+touch - se foloseste pentru a crea fisiere
+cd - se foloseste pentru a schimba directorul
+cd .. - se foloseste pentru a te duce inapoi cu un folder

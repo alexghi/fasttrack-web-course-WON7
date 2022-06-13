@@ -1,0 +1,143 @@
+/* importam font-uri ca sa arate mai fancy */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+/* da, in CSS putem avea variable */
+/* gasesti aici documentatia: 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+ */
+/* 
+  /* in general s-ar folosi daca sunt locuri unde poti reutiliza acceasi valoare
+        si schimband-o o singura data, se schimba peste tot unde e folosita
+        puteti folosi pentru culoarea de la limbile ceasului, butoanele lui,
+        cifrele lui - dupa cum doriti
+    */
+:root{
+  --body-color: #2c2d2a;
+  --seconds-hand-color: #e86357;
+  --savanna-bg: #e9bf8b;
+  --beach-bg: #e7dfcf;
+  --glacier-bg: #b6d6c8;
+  --body-font: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--glacier-bg);
+}
+
+.clock {
+  background: var(--beach-bg);
+  width: 300px;
+  height: 300px;
+  margin: 8% auto 0;
+  border-radius: 50%;
+  border: 14px solid var(--body-color);
+  position: relative;
+}
+    
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  z-index: 10;
+}
+    
+.hour-hand {
+  position: absolute;
+  z-index: 5;
+  width: 4px;
+  height: 65px;
+  background: black;
+  top: 79px;
+  transform-origin: 50% 72px;
+  left: 50%;
+  margin-left: -2px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+    
+.minute-hand {
+  position: absolute;
+  z-index: 6;
+  width: 4px;
+  height: 100px;
+  background: rgb(71, 67, 67);
+  top: 46px;
+  left: 50%;
+  margin-left: -2px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform-origin: 50% 105px;
+}
+    
+.second-hand {
+  position: absolute;
+  z-index: 7;
+  width: 2px;
+  height: 120px;
+  background: var(--seconds-hand-color);
+  top: 26px;
+  left: 50%;
+  margin-left: -1px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform-origin: 50% 125px;
+}
+    
+span {
+  display: inline-block;
+  position: absolute;
+  color: rgb(51, 50, 51);
+  z-index: 4;
+}
+
+.h3 {
+  top: 140px;
+  right: 30px;
+}
+
+.h6 {
+  bottom: 30px;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.h9 {
+  left: 32px;
+  top: 140px;
+}
+
+.h12 {
+  top: 30px;
+  left: 55%;
+  margin-left: -9px;
+}  
+
+.diallines {
+  position: absolute;
+  z-index: 2;
+  width: 2px;
+  height: 15px;
+  background: rgb(133, 130, 130);
+  left: 50%;
+  margin-left: -1px;
+  transform-origin: 50% 150px;
+}
+.diallines:nth-of-type(5n) {
+  position: absolute;
+  z-index: 2;
+  width: 4px;
+  height: 25px;
+  background: rgb(110, 108, 108);
+  left: 50%;
+  margin-left: -1px;
+  transform-origin: 50% 150px;
+}
