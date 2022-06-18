@@ -50,3 +50,78 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.clock {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  border: 20px solid #1d1e20;
+  border-radius: 50%;
+  
+}
+/*
+.dot{
+  width: 25px;
+  height: 25px;
+  background-color: #1d1e20;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  
+}
+*/
+.hand{
+transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+ .hour--hand{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 14px;
+  width: 18%;
+  background-color: #1d1e20;
+  border-radius: 20%;
+  transform: rotate(-80deg);
+  transform-origin: left;
+ }
+ .minute--hand{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  width: 20%;
+  background-color: #1d1e20;
+  border-radius: 20%;
+  transform: rotate(-60deg);
+  transform-origin: left;
+ }
+ .second--hand{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 3px;
+  width: 23%;
+  background-color: rgb(219, 38, 38);
+  border-radius: 20%;
+  transform: rotate(-90deg);
+  transform-origin: left;
+ }
+ .lines{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 40%;
+  background: #09130a;
+  z-index: 0;
+  left: 49%;
+
+
+
+}
+ .hour1{
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+ }

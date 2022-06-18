@@ -3,7 +3,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>C9 - Analog Clock</title>
   </head>
@@ -11,9 +10,24 @@
     <div id="app-background-image">
       <div class="container">
         <div class="clock-container">
-          Clock HTML goes in this place - you can remove this text
+          <div class="clock"></div>
+            <div class="dot"></div>
+            <div>
+              <div class="hand hour--hand"></div>
+              <div class="hand minute--hand"></div>
+              <div class="hand second--hand"></div>
+            </div>
+            <div>
+              <span class="hour1">3</span>
+              <span class="hour2">6</span>
+              <span class="hour3">9</span>
+              <span class="hour4">12</span>
+              <div class="lines"></div>
+            </div>
+            <div class="diallines"></div>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
