@@ -14,15 +14,30 @@ in al doilea parametru
 setInterval, se apeleaza la fiecare ms
 */
 
-setTimeout(function() {
-    console.log('aici dupa o secunda')
-}, 1000)
+setInterval(() => {
+	d = new Date(); //object of date()
+	hr = d.getHours();
+	min = d.getMinutes();
+	sec = d.getSeconds();
+	hr_rotation = 30 * hr + min / 2; //converting current time
+	min_rotation = 6 * min;
+	sec_rotation = 6 * sec;
 
-setInterval(function() {
-    console.log('aici LA FIECARE secunda')
-}, 1000) // valoare exprimata in ms 1000ms = 1s 
+	hour.style.transform = `rotate(${hr_rotation}deg)`;
+	minute.style.transform = `rotate(${min_rotation}deg)`;
+	second.style.transform = `rotate(${sec_rotation}deg)`;
+}, 1000);
 
-console.log(`acum - `, new Date())
-
-// functiile din acest fisier se pot inlocui cu cele pe care le veti face voi
-// sunt doar ca sa aveti cateva lucruri de la care sa porniti
+function startStopWatch() {
+    var date = new Date ();   
+    var startClockId = setInterval(() => {  
+      date.setSeconds(date.getSeconds() + 1)
+    }, 1000);
+    let number = parseInt(document.getElementById("number").value);
+    setTimeout(function () {
+      clearInterval(startClockId);
+    }, number * 1000);
+    console.log(typeof(number));
+    console.log(document.getElementById("number").value);
+    console.log(number);
+  }
