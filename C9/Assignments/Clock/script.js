@@ -13,32 +13,24 @@ primeste ca prim parametru o functie care se va autoinvoca (se va apela) dupa un
 in al doilea parametru
 setInterval, se apeleaza la fiecare ms
 */
-var dialLines = document.getElementsByClassName('diallines');
-var clockEl = document.getElementsByClassName('clock')[0];
 
-for(var i = 1; i < 60; i++) {
-  clockEl.innerHTML += "<div class='diallines'></div>";
-  dialLines[i].style.transform = "rotate(" + 6 * i + "deg)";
-}
+const minHand = document.querySelector(".min");
+const secHand = document.querySelector(".sec");
+const hourHand = document.querySelector(".hour");
 
-function clock () {
-    d = new Date(),
-    h = d.getHours(),
-    m = d.getMinutes(),
-    s= d.getSeconds(),
-    hDeg = h * 30 + m *(360/720),
-    mDeg = m * 6 + s * (360/3600),
-    sDeg = s * 6,
-    hEl = document.querySelector('.hour-hand'),
-    mEl = document.querySelector('.minute-hand'),
-    sEl = document.querySelector('.second-hand');
-hEl.style.transform = "rotate("+hDeg+"deg)";
-mEl.style.transform = "rotate("+mDeg+"deg)";
-sEl.style.transform = "rotate("+sDeg+"deg)";
-}
+function clock() {
+    const date = new Date();
+    const secDeg = (date.getSeconds() / 60) * 360 - 90;
+    const minDeg = (date.getMinutes() / 60) * 360 - 90;
+    const hourDeg = (date.getHours() / 12) * 360 - 90;
+    secHand.style.transform = `rotate(${secDeg}deg)`;
+    minHand.style.transform = `rotate(${minDeg}deg)`;
+    hourHand.style.transform = `rotate(${hourDeg}deg)`;
+  }
 
-setInterval('clock()', 200)
+setInterval(clock, 1000);
 
+clock()
 
 // functiile din acest fisier se pot inlocui cu cele pe care le veti face voi
 // sunt doar ca sa aveti cateva lucruri de la care sa porniti
