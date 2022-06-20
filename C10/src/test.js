@@ -1,72 +1,59 @@
-// var keepsHisWord;
+async function myPromise() {
+    const isCool = true;
 
-// keepsHisWord = true;
-
-// console.log('initializing promise')
-
-// const promise1 = new Promise(function(resolve, reject) {
-//     if( keepsHisWord ) {
-//         resolve('the man likes to keep his word')
-//     }
-//     else {
-//         reject('the man doen\'t want to keep his word')
-//     }
-// })
-
-var howIs = 'cool'
-
-console.log('promise initialized')
-
-var promise2 = new Promise(function(resolve, reject) {
-    setTimeout(() => {
-        resolve(['student1', 'student2'])
-        
-        
-        // resolve({
-        //     message: `this man who is ${howIs} likes to keep his word`,
-        //     code: `whatever_you_like`
-        // })
-    }, 5 * 1000)
-})
-
-
-console.log('after promise initialized')
-
-
-promise2
-    .then(
-        function(data) {
-            console.log(data);
-            console.log('1st then  - after promise is resolved')
-            
-            return new Promise((resolve, reject) => {
+    try {
+        var data = await new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                reject('student list fetch error')
+                // resolve(['student1', 'student2'])
+                console.log('resolving students now')
                 
-                setTimeout(() => {
-                    reject({
-                        reason: 'no_more_money'
-                    })
-                }, 2000)
-            })
-        }
-    )
-    .then(
-        function(aaa) {
-            console.log(aaa)
-            console.log('2nd then - you are here now')
-        }
-    )
-    .then(
-        function() {
-            console.log('3rd - and now right here')
-        }
-    )
-    .catch(function(e) {
-        console.log('something went wrong because of reason', e)
-    }) 
-    .finally(function() {
-        console.log('nothing left to say')
+                // resolve({
+                //     message: `this man who is ${howIs} likes to keep his word`,
+                //     code: `whatever_you_like`
+                // })
+            }, 5 * 1000)
+        })
+    }
+    catch(e) {
+        console.log('error', e)
+    }
+    
+    const t = new Promise(function(resolve, reject) {
+        setTimeout(() => {
+            reject('something went wrong')
+            resolve(['teacher1', 'teacher2'])
+            console.log('resolving teacher now')
+            
+            // resolve({
+            //     message: `this man who is ${howIs} likes to keep his word`,
+            //     code: `whatever_you_like`
+            // })
+        }, 5 * 1000)
     })
 
+    const sum = function(a, b) {
+        console.log('your sum result', a + b );
+    }
 
-console.log('some random action operation')
+    sum(1, 2)
 
+
+    return t
+
+
+}
+
+myPromise()
+    .then((data) => {
+        console.log('data after promise resolve', data)
+    })
+    .then(()=> {
+        console.log('after')
+    })
+    .catch(function(e) {
+        console.log('error', e);
+    } ) 
+    .finally( function() {
+        console.log('regardless of error or success, finally show this')
+    })
