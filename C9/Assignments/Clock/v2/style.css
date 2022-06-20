@@ -1,0 +1,353 @@
+/* importam font-uri ca sa arate mai fancy */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+/* da, in CSS putem avea variable */
+/* gasesti aici documentatia: 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+ */
+:root {
+  /* in general s-ar folosi daca sunt locuri unde poti reutiliza acceasi valoare
+        si schimband-o o singura data, se schimba peste tot unde e folosita
+        puteti folosi pentru culoarea de la limbile ceasului, butoanele lui,
+        cifrele lui - dupa cum doriti
+    */
+  --body-color: #2c2d2a;
+  --clock-bk-color: #3397d3;
+  --body-font: "Montserrat", sans-serif;
+
+  --hand-width: 0.5rem;
+  --sec-hand: 12rem;
+  --min-hand: calc(var(--sec-hand) * 0.75);
+  --hour-hand: calc(var(--sec-hand) * 0.5);
+  --clr-red: hsl(11, 79%, 49%);
+  --clr-dark: hsl(0, 0%, 11%);
+  --clock-face-bk-black: black;
+  --btn-color: #2196f3;
+  --btn-focus-color: #0b76cc;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: #1d1e20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: var(--body-color);
+}
+
+.container {
+  max-width: 1100px;
+  border-radius: 4px;
+  max-height: 680px;
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  background-color: #282828;
+}
+
+.clock-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  padding: 0.5rem;
+  border: 25px solid #636369;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clock-bk-color);
+
+  box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+  inset 4px 4px 10px rgba(0,0,0,0.5),
+  inset -4px -4px 10px rgba(67,67,67,0.5),
+  4px 4px 10px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  margin: 50px auto;
+}
+
+.clock-face {
+  position: relative;
+  background: var(--clock-bk-color);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.clock-face ol {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.clock-face ol li {
+  position: absolute;
+  font-size: 2em;
+}
+
+.clock-face ol li:nth-child(1) {
+  right: 227px;
+  top: 10px;
+  z-index: 20;
+}
+
+.clock-face ol li:nth-child(2) {
+  right: 10px;
+  top: 220px;
+  z-index: 20;
+}
+
+.clock-face ol li:nth-child(3) {
+  right: 225px;
+  top: 435px;
+  z-index: 20;
+}
+
+.clock-face ol li:nth-child(4) {
+  right: 445px;
+  top: 220px;
+  z-index: 20;
+}
+
+.clock-face .marking{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: var(--clock-face-bk-black);
+  z-index: 0;
+  left: 49%;
+}
+
+.clock-face .marking {
+  background: var(--clock-face-bk-black);
+  width: 3px;
+}
+
+.clock-face .marking.marking-one {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg)
+}
+
+.clock-face .marking.marking-two {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg)
+}
+
+.clock-face .marking.marking-three {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  transform: rotate(120deg)
+}
+
+.clock-face .marking.marking-four {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg)
+}
+
+.inner-clock-face {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: var(--clock-bk-color);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  z-index: 5;
+}
+
+.inner-clock-face::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: var(--clock-bk-color);
+  z-index: 11;
+}
+
+.clock-small-disk {
+  position: absolute;
+  top: 49.7%;
+  left: 50.6%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: var(--clr-red);
+  z-index: 30;
+}
+
+.hand {
+  background: var(--clr-dark);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second {
+  background: var(--clr-red);
+  width: 0.1rem;
+  height: var(--sec-hand);
+  transform: translateX(-50%) rotate(0deg);
+  z-index: 7;
+}
+
+.second::before {
+  content: "";
+  height: 2rem;
+  width: 0.1rem;
+  background: var(--clr-red);
+  position: absolute;
+  top: 100%;
+  z-index: 7;
+}
+
+.minute {
+  height: var(--min-hand);
+  width: 0.3rem;
+  transform: translateX(-50%) rotate(0deg);
+  background: var(--clr-dark);
+  z-index: 6;
+}
+
+.minute::after {
+  content: "";
+  height: 1.7rem;
+  width: 0.3rem;
+  background: var(--clr-dark);
+  position: absolute;
+  top: 100%;
+  border-radius: 0px 0px 10px 10px;
+  z-index: 6;
+}
+
+.hour {
+  height: var(--hour-hand);
+  width: 0.4rem;
+  background: var(--clr-dark);
+  transform: translateX(-50%) rotate(0deg);
+  z-index: 5;
+}
+
+.hour::after {
+  content: "";
+  height: 1.7rem;
+  width: 0.4rem;
+  background: var(--clr-dark);
+  position: absolute;
+  top: 100%;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.btn {
+  font-family: "Roboto medium", sans-serif;
+  font-size: 12px;
+  overflow-wrap: break-word;
+  display: flex;
+  height: 50px;
+  width: 125px;
+  position: absolute;
+  padding: 6px 16px;
+  line-height: 1.42857143;
+  text-align: center;
+  align-items: center;
+  white-space: normal;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  border-radius: 2px;
+  background: var(--btn-color);
+  color: #fff;
+  outline: 0;
+  z-index: 30;
+}
+.btn:focus {
+  background: var(--btn-focus-color);
+}
+
+#watch-button {
+  left: 20px;
+  top: 20px;
+}
+
+#start-stopwatch-button {
+  right: 20px;
+  top: 20px;
+}
+
+#stop-stopwatch-button {
+  right: 20px;
+  top: 100px;
+}
+
+#reset-stopwatch-button {
+  right: 20px;
+  top: 180px;
+}
+
+#pause-stopwatch-button {
+  right: 20px;
+  top: 260px;
+}
+
+.button-up {
+  box-shadow: 0 2px 2px 0 rgb(0, 187, 255), 0 1px 5px 0 rgb(0, 199, 255), 0 3px 1px -2px rgb(28, 171, 231);
+  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-up:active {
+  box-shadow: 0 8px 10px 1px rgb(0, 235, 255), 0 3px 14px 2px rgb(10, 195, 236), 0 5px 5px -3px rgba(0, 233, 255, 0.76);
+}
+
+.timerSpan {
+  padding:.1em;
+  width: 200px;
+  height: 100px;
+  font-size: 2.5em;
+  color: #F2EEB3;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 10px;
+  background-image: linear-gradient(#065488, #0875cc);
+  position: absolute;
+  right: 20px;
+  top: 500px;
+  box-shadow: 0 2px 2px 0 rgb(0, 187, 255), 0 1px 5px 0 rgb(0, 199, 255), 0 3px 1px -2px rgb(28, 171, 231);
+  z-index: 30;
+}
