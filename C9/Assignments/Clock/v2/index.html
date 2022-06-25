@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>C9 - Analog Clock</title>
+  </head>
+  <body>
+    <div id="app-background-image">
+      <div class="container">
+        <div class="clock-container">
+          <button id="watch-button" class="btn button-up">Activate Simple Watch</button>
+          <button id="start-stopwatch-button" class="btn button-up">Start Stopwatch</button>
+          <button id="stop-stopwatch-button" class="btn button-up">Stop Stopwatch </button>
+          <button id="reset-stopwatch-button" class="btn button-up">Reset Stopwatch </button>
+          <button id="pause-stopwatch-button" class="btn button-up">Pause/Resume Stopwatch </button>
+
+          <span id="stopwatch-placeholder" class="timerSpan">00:00:00</span>
+          <div class="clock">
+            <div class="clock-face" >
+              <ol>
+                <li>12</li>
+                <li>3</li>
+                <li>6</li>
+                <li>9</li>
+                <div class="marking marking-one"></div>
+                <div class="marking marking-two"></div>
+                <div class="marking marking-three"></div>
+                <div class="marking marking-four"></div>
+              </ol>
+              <div class="clock-small-disk"></div>
+              <div class="inner-clock-face"></div>
+
+              <div class="hand second"></div>
+              <div class="hand minute"></div>
+              <div class="hand hour"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
