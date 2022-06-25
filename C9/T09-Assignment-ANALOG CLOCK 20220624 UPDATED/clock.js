@@ -32,6 +32,10 @@ function clockRotating() {
 //   const myClockInterval = setInterval(clockRotating, 1000);
 // }
 
+// function clockOn() {
+//   myClockInterval
+// }
+
 function clockStop() {
   clearInterval(myClockInterval);
   console.log(clearInterval(myClockInterval))
@@ -80,40 +84,4 @@ function timerReset() {
     hourHand.style.transform = "rotate(" + 0 * 360 + "deg)";
     document.querySelector("#timerOutput").innerHTML = `0:0:0`
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function timerOn() {
-//   seconds++;
-//   console.log(seconds)
- 
-//   const mySeconds = seconds / 60;
-//   const myMinutes = Math.floor(seconds / 3600);
-//   const myHours = Math.floor(seconds / 3600);
-//   console.log('minutele ', myMinutes)
-//   secondHand.style.transform = "rotate(" + mySeconds * 360 + "deg)";
-//   minHand.style.transform = "rotate(" + myMinutes * 360 + "deg)";
-//   hourHand.style.transform = "rotate(" + myHours * 360 + "deg)";
-//   console.log('aici', mySeconds, myMinutes)
-//   console.log('tot aici', mySeconds, myMinutes)
-  
-//   document.querySelector("#timerOutput").innerHTML = `${myHours}:${myMinutes}:${Math.floor(seconds)}`;   
-// }
-
 
