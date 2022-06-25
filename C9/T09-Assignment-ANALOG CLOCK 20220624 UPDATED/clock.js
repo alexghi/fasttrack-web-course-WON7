@@ -26,14 +26,21 @@ function clockRotating() {
   document.querySelector(".current-day").innerHTML = `${DayInMonth} ${Month} ${Year}`;
 //   document.querySelector(".current-day").innerHTML = date.toDateString();
 }
+// setInterval(clockRotating, 1000);
+
+// function clockStart() {
+//   const myClockInterval = setInterval(clockRotating, 1000);
+// }
 
 function clockStop() {
   clearInterval(myClockInterval);
+  console.log(clearInterval(myClockInterval))
 }
 
 //========================= TIMER
 
 var seconds = 0;
+var myTimerInterval;
 
 function timerOn() {
   seconds++;
@@ -52,12 +59,18 @@ function timerOn() {
   
   document.querySelector("#timerOutput").innerHTML = `${myHours}:${myMinutes - minutesToSubstract}:${Math.floor(seconds) - secondsToSubstract}`;
 }
-
-const myTimerInterval = setInterval(timerOn, 1000);
+function timerStart() {
+  myTimerInterval = setInterval(timerOn, 1000);
+}
+function timerStop() {
+  clearInterval(myTimerInterval);
+}
+console.log(timerStop())
+document.getElementById("timerStopButton").addEventListener("click", timerStop);
 
 function timerStop() {
-    clearInterval(myTimerInterval);
-    clockRotating();
+  clearInterval(myTimerInterval)
+  console.log(clearInterval(myTimerInterval))
 }
 
 function timerReset() {
@@ -67,6 +80,23 @@ function timerReset() {
     hourHand.style.transform = "rotate(" + 0 * 360 + "deg)";
     document.querySelector("#timerOutput").innerHTML = `0:0:0`
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function timerOn() {

@@ -25,7 +25,7 @@ body {
   position: relative;
   background-color: #091921;
   color:#e3e7e9;
-  top: 170px;
+  top: 145px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .clock-ctn {
@@ -199,7 +199,7 @@ body {
   position: relative;
   /* background-color: #bec6ca; */
   color:#243e4b;
-  top: 300px;
+  top: 310px;
   font-family: Arial, Helvetica, sans-serif, #243e4b;
   font-weight: bolder;
   font-size: 35px;
@@ -208,14 +208,50 @@ body {
   align-items: center;
 }
 
+#button {
+  position: relative;
+  top: 330px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  margin-bottom: 50px;
+}
 
-#resetButton, #timerButton {
+#clockStartButton, #clockStopButton, #timerStopButton, #timerResetButton {
   color: grey; 
   background-color:rgb(255, 236, 236); 
-  width: 70px; 
-  height: 25px; 
-  border-radius: 7%;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+  border-radius: 10px;
+  width: 74px; 
+  height: 40px; 
   margin: 20px;
+  padding: 10px;
   font-family: Arial, Helvetica, sans-serif, #243e4b;
   font-weight: bolder;
+  word-wrap: break-all;
+  font-size: 10px;
+  text-align: center;
+  
+}
+
+
+#clockStartButton:hover, #clockStopButton:hover, #timerStopButton:hover, #timerResetButton:hover {
+  background-color:#a2a3a8;
+  transition: 0.7s;
+}
+
+#clockStartButton:focus, #clockStopButton:focus, #timerStopButton:focus, #timerResetButton:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 4px #8b898d;
+  color: rgb(121, 37, 37);
+  text-shadow: #091921;
+  background-color: #f8f1ef;
+}
+
+#clockStartButton:active, #clockStopButton:active, #timerStopButton:active, #timerResetButton:active {
+  color: #f8f1ef;
+  background-color: rgb(121, 37, 37);
 }
