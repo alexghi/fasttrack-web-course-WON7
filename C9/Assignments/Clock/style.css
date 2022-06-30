@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+:root{
+  --body-color: #2c2d2a;
+  --seconds-hand-color: #e86357;
+  --savanna-bg: #e9bf8b;
+  --beach-bg: #e7dfcf;
+  --glacier-bg: #b6d6c8;
+  --body-font: "Montserrat", sans-serif;
+}
+
+ *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--body-font);
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: linear-gradient(45deg, var(--glacier-bg), var(--savanna-bg));
+}
+
+.clock{
+	position: relative;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 250px;
+	border: 10px solid var(--body-color);
+	background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: var(--beach-bg);
+	z-index: -1;
+}
+
+.clock:before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 20px;
+	background-color: rgb(0, 0, 0);
+	border-radius: 50%;
+	z-index:1;
+}
+
+.num{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 18px;
+}
+
+.num:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 15px;
+	background-color: var(--body-color);
+}
+
+.num1{
+	transform: rotate(30deg);
+}
+.num1 div{
+	transform: rotate(-30deg);
+}
+
+.num2{
+	transform: rotate(60deg);
+}
+.num2 div{
+	transform: rotate(-60deg);
+}
+
+.num3{
+	transform: rotate(90deg);
+}
+.num3 div{
+	transform: rotate(-90deg);
+}
+
+.num4{
+	transform: rotate(120deg);
+}
+.num4 div{
+	transform: rotate(-120deg);
+}
+
+.num5{
+	transform: rotate(150deg);
+}
+.num5 div{
+	transform: rotate(-150deg);
+}
+
+.num6{
+	transform: rotate(180deg);
+}
+.num6 div{
+	transform: rotate(-180deg);
+}
+
+.num7{
+	transform: rotate(210deg);
+}
+.num7 div{
+	transform: rotate(-210deg);
+}
+
+.num8{
+	transform: rotate(240deg);
+}
+.num8 div{
+	transform: rotate(-240deg);
+}
+
+.num9{
+	transform: rotate(270deg);
+}
+.num9 div{
+	transform: rotate(-270deg);
+}
+
+.num10{
+	transform: rotate(300deg);
+}
+.num10 div{
+	transform: rotate(-300deg);
+}
+
+.num11{
+	transform: rotate(330deg);
+}
+.num11 div{
+	transform: rotate(-330deg);
+}
+
+.hand{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.min {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 38%;
+	height: 5px;
+	background-color: rgb(0, 0, 0);
+	transform-origin: left;
+	border-radius: 50%;
+	transform: rotate(-90deg);
+  }
+
+.sec {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 35%;
+	height: 1.5px;
+	background-color: var(--seconds-hand-color);;
+	transform-origin: left;
+	border-radius: 50%;
+	transform: rotate(-90deg);
+  }
+  
+.hour {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22%;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  transform-origin: left;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+}
