@@ -25,20 +25,19 @@ var myFunction3 = function (a) {
   return typeof a;
 };
 
-let actor = "Keanu Reeves"
+let actor = "Keanu Reeves";
 
-console.log(myFunction3(actor))
+console.log(myFunction3(actor));
 
 //4. write a function that takes as argument a number,
 // a string, and an object
 // display the values of the primitives (excluding the object)
-var myFunction4 = function (a) {
-  return a;
+var myFunction4 = function (number, string, object) {
+  console.log(number);
+  console.log(string);
+  console.log(object.age);
 };
-
-console.log(myFunction4(1));
-console.log(myFunction4("this is a string"));
-myFunction4({ type: "Audi", model: "r8", year: "2016" });
+myFunction4(12, "Mircea", { name: "mircea", age: 22 });
 
 //5. write a Student class that has a constructor with
 // name (will be a String), age (will be a Number), hobbies (will be an Array of Strings) e.g. ["Music", "Travel"]
@@ -49,13 +48,14 @@ class Student {
     this.age = age;
     this.hobbies = hobbies;
   }
+
+  greeting() {
+    console.log(`Hello my name is ${this.name} and I am ${this.age}`);
+  }
 }
 
 var myStudent = new Student("Popescu Andrei", 22, ["Reading", "Music"]);
-var greeting = function () {
-  return "Hello my name is " + myStudent.name + " and I am " + myStudent.age;
-};
-console.log(greeting());
+console.log(myStudent.greeting());
 
 //6. write a Teacher class that has a constructor with
 // name (will be a String), age (will be a Number)
@@ -71,7 +71,7 @@ class Teacher {
 // console log their greetings
 
 var myStudent2 = new Student("Mihaela Hurez", 21, ["Movies", "Hiking"]);
-var myStudent3= new Student("Marius Velescu", 22 , ["Tennis" , "Chess"]);
+var myStudent3 = new Student("Marius Velescu", 22, ["Tennis", "Chess"]);
 
-console.log("Hello, my name is " + myStudent2.name + " and I am " + myStudent2.age);
-console.log("Hello, my name is " + myStudent3.name + " and I am " + myStudent3.age);
+console.log(myStudent2.greeting());
+console.log(myStudent3.greeting());

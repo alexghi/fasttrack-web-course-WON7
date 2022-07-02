@@ -25,17 +25,18 @@
 
     <script>
       const insert_Row = () => {
-        var table = document.getElementById("sampleTable");
-        var row = table.insertRow(0);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        cell1.innerHTML = "New cell1";
-        cell2.innerHTML = "New cell2";
+        let table = document.getElementById("sampleTable");
+        let row = table.insertRow(0);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+
+        cell1.innerHTML = 'New Cell 1';
+        cell2.innerHTML = 'New Cell 2';
       };
 
-      const delete_Row = () => {
-        document.getElementById("sampleTable").deleteRow(0);
-      };
+      const delete_Row= ()=>{
+        document.getElementById('sampleTable').deleteRow(0);
+      }
     </script>
   </body>
 </html>

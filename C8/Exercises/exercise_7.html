@@ -1,4 +1,5 @@
-<!-- 7. Write a JavaScript function that creates a table, accept row, column numbers from the user, and input row-column number as content (e.g. Row-0 Column-0) of a cell. -->
+<!-- 7. Write a JavaScript function that creates a table, accept row, column numbers from the user, and input row-column number as content
+   (e.g. Row-0 Column-0) of a cell. -->
 <!-- bassically you will do a dynamic table, user will input row and cell numbers from prompt (so 2 prompts) -->
 <!-- HINT: use for loop to generate rows, inside for that generates the row create another for loop to generate cells -->
 <!-- extra points if odd rows have different color than the even ones -->
@@ -10,8 +11,6 @@
       body {
         margin: 30px;
       }
-
-      
     </style>
   </head>
   <body>
@@ -19,5 +18,22 @@
     <form>
       <input type="button" onclick="createTable()" value="Create the table" />
     </form>
+
+    <script>
+      function createTable() {
+        var rn = window.prompt("Input number of rows", 1);
+        const cn = window.prompt("Input number of columns", 1);
+        var partseIntRn = parseInt(rn, 10);
+
+        for (var r = 0; r < partseIntRn; r++) {
+          var x = document.getElementById("myTable").insertRow(r);
+
+          for (var c = 0; c < parseInt(cn, 10); c++) {
+            var y = x.insertCell(c);
+            y.innerHTML = "Row-" + r + " Column-" + c;
+          }
+        }
+      }
+    </script>
   </body>
 </html>
