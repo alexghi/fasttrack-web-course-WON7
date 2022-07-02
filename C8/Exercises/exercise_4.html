@@ -19,6 +19,7 @@
     <button onclick="getAttributes()">
       Click here to get attributes value
     </button>
+<<<<<<< HEAD
 
     <script>
       const getAttributes = () => {
@@ -36,6 +37,22 @@
         const target = document.getElementById("w3r").getAttribute("target");
         alert("The value of the target attribute is : " + target);
       };
+=======
+    <script>
+      function getAttributes () {
+        var first = document.getElementById("w3r").href;
+        console.log('value of the href attribute of the link is : '+ first);
+        var second = document.getElementById("w3r").hreflang;
+        console.log('value of the hreflang attribute of the link is : '+ second);
+        var third = document.getElementById("w3r").rel;
+        console.log('value of the rel attribute of the link is : '+ third);
+        var fourth = document.getElementById("w3r").target;
+        console.log('value of the target attribute of the link is : '+ fourth);
+        var fourth = document.getElementById("w3r").type;
+        console.log('value of the type attribute of the link is : '+ fourth);
+      }
+      
+>>>>>>> 12eb0bb61f4c3aab5191109cff3538a6ad9100f9
     </script>
   </body>
 </html>

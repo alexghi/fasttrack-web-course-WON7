@@ -6,12 +6,13 @@
   <head>
     <meta charset="utf-8" />
     <title>JS DOM paragraph style</title>
-  </head>
+    </head>
   <body>
     <p id="text">JavaScript Exercises - w3resource</p>
     <div>
       <button id="jsstyle" onclick="js_style()">Style</button>
     </div>
+<<<<<<< HEAD
 
     <script>
       const js_style = () => {
@@ -20,5 +21,16 @@
         alert("The color of the paragraph has now changed to " + change);
       };
     </script>
+=======
+    <script>
+      function js_style() {
+        document.getElementById('text').style.color = 'blue';
+        document.getElementById('text').style.fontSize = 25;
+        document.getElementById('text').style.fontFamily = 'Verdana';
+      }
+
+  
+  </script>
+>>>>>>> 12eb0bb61f4c3aab5191109cff3538a6ad9100f9
   </body>
 </html>

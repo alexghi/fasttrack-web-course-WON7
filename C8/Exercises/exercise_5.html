@@ -21,6 +21,7 @@
 
     <br />
     <input type="button" onclick="insert_Row()" value="Insert row" />
+<<<<<<< HEAD
     <input type="button" onclick="delete_Row()" value="Delete row" />
 
     <script>
@@ -36,6 +37,17 @@
 
       const delete_Row= ()=>{
         document.getElementById('sampleTable').deleteRow(0);
+=======
+    <script>
+      function insert_Row () {
+        const table = document.getElementById("sampleTable");
+        const row = table.insertRow(0);
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+
+        cell1.innerHTML = "NEW CELL1";
+        cell2.innerHTML = "NEW CELL2";
+>>>>>>> 12eb0bb61f4c3aab5191109cff3538a6ad9100f9
       }
     </script>
   </body>
