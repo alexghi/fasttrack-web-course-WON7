@@ -12,9 +12,9 @@ async function loadWeather() {
         .then(result => result)
         .catch(error => console.log('error', error));
 
-        console.log('mydata',  data.next_days);
-        const filteredData = data.next_days;
-            console.log('filtered data 1', filteredData);
+     console.log('mydata',  data.next_days);
+     const filteredData = data.next_days;
+          console.log('filtered data 1', filteredData);
         
     
     for(var i = 0; i < filteredData.length; i++) {
@@ -42,7 +42,7 @@ async function loadWeather() {
         
              
         // dayDiv.className = 'w-day';
-        dayDiv.setAttribute('id', 'w-day');
+        dayDiv.setAttribute('id', `w-day-${i}`);
         dayDiv.innerHTML = `${myDay}  \n ${maxCelsius}ºC`; // \n ${minCelsius}ºC \n ${maxFahrenheit}ºF \n ${minFahrenheit}ºF
         document.getElementById('w-body').appendChild(dayDiv);
              console.log(dayDiv);
@@ -55,7 +55,7 @@ async function loadWeather() {
         img.alt = 'weather pic';
         // img.className = 'w-icon';
         img.setAttribute('id', 'w-icon')
-        document.getElementById('w-day').appendChild(img);
+        document.getElementById(`w-day-${i}`).appendChild(img);
     
 
 
