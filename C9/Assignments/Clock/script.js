@@ -14,15 +14,23 @@ in al doilea parametru
 setInterval, se apeleaza la fiecare ms
 */
 
-setTimeout(function() {
-    console.log('aici dupa o secunda')
-}, 1000)
+const minHand = document.querySelector(".min");
+const secHand = document.querySelector(".sec");
+const hourHand = document.querySelector(".hour");
 
-setInterval(function() {
-    console.log('aici LA FIECARE secunda')
-}, 1000) // valoare exprimata in ms 1000ms = 1s 
+function clock() {
+    const date = new Date();
+    const secDeg = (date.getSeconds() / 60) * 360 - 90;
+    const minDeg = (date.getMinutes() / 60) * 360 - 90;
+    const hourDeg = (date.getHours() / 12) * 360 - 90;
+    secHand.style.transform = `rotate(${secDeg}deg)`;
+    minHand.style.transform = `rotate(${minDeg}deg)`;
+    hourHand.style.transform = `rotate(${hourDeg}deg)`;
+  }
 
-console.log(`acum - `, new Date())
+setInterval(clock, 1000);
+
+clock()
 
 // functiile din acest fisier se pot inlocui cu cele pe care le veti face voi
 // sunt doar ca sa aveti cateva lucruri de la care sa porniti
