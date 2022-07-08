@@ -47,7 +47,7 @@ async function loadWeather() {
         document.getElementById('w-body').appendChild(dayDiv);
              console.log(dayDiv);
 
-
+ 
              // IMAGES
         var img = document.createElement('img');
         img.src = someDay.iconURL;

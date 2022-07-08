@@ -1,0 +1,54 @@
+:root {
+    --bkg-color: rgb(238, 237, 237);    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bkg-color);
+}
+
+h3 {
+    background-color: inherit;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#honda, #dodge, #bmw {
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    color:rgb(0, 0, 0);
+    background-color:rgb(190, 199, 211);
+    padding: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bolder;
+    /* font-style: oblique; */
+    font-size: larger;
+    text-shadow: 2oem;
+}
+
+#honda {    
+    border-top-left-radius: 50px 50px;
+    border-bottom-left-radius: 50px 50px;
+    border-right:1px solid black;
+}
+
+#dodge {
+    color:black;
+}
+
+#bmw {
+    border-top-right-radius: 50px 50px;
+    border-bottom-right-radius: 50px 50px;
+    border-left:1px solid black;
+}

@@ -15,6 +15,7 @@ async function loadNasaImages( ) {
    
     for(var i = 0; i < data.length; i++) {
         var image = data[i];
+        console.log(image)
         var img = document.createElement('img');
         img.src = image.url;
         img.alt = image.title;
