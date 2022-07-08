@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  background-color: whitesmoke;
+}
+.img-temperature-container {
+  display: flex;
+  align-items: center;
+}
+.title {
+  color: white;
+}
+.country--region {
+  color: rgb(222, 216, 205);
+  padding: 0px 0px 15px 0px;
+}
+.currentday--hour {
+  color: rgb(222, 216, 205);
+  font-size: 13px;
+}
+.header {
+  display: flex;
+  background-color: rgba(76, 123, 185, 1);
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.temp-style {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nextday--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.max--temp {
+  background-color: green;
+}
+.min--temp {
+  background-color: rgb(155, 220, 57);
+}
+.day {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  border: 1px solid rgb(212, 202, 202);
+  text-align: center;
+}
+.day--name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.day--img {
+  width: 40px;
+  background-color: rgb(136, 183, 223);
+  padding: 5px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.icon-background {
+  background-color: rgb(216, 232, 245);
+}
+.today--data {
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.zero-ten {
+  background-color: rgb(54, 221, 141);
+}
+.less-than-zero {
+  background-color: rgb(178, 229, 239);
+}
+.ten-to-fifteen {
+  background-color: rgb(54, 172, 128);
+}
+.fifteen-to-twenty {
+  background-color: rgb(90, 210, 90);
+}
+.twenty-to-twentyfive {
+  background-color: rgb(150, 197, 43);
+}
+.twentyfive-to-thirty {
+  background-color: rgb(224, 238, 29);
+}
+.more-than-thirty {
+  background-color: rgb(229, 177, 66);
+}
+.hidden {
+  display: none;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
