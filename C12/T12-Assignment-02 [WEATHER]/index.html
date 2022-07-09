@@ -9,7 +9,7 @@
     <script defer async src="weather.js"></script>
   </head>
   <body>
-    <h1>Oradea Weather Forecast</h1>
+    <h1 style="text-align:center;">Oradea Weather Forecast</h1>
     <div id="container">
         <div id="weather">
             <div id="w-header">
@@ -27,11 +27,10 @@
             </div>
         </div>
 
-        <button id="CFbutton">Cº/Fº (in lucru)</button>
+        <button id="CFbutton" onclick="toggleMeasurementUnit()">Cº/Fº</button>
 
         <div id="temp"></div>
     </div>
-    
     
   </body>
 </html>

@@ -6,6 +6,7 @@
     --header-bkg-color: rgb(106, 139, 231);
     --w-body-color: rgb(225, 228, 236);
     --font-color1: rgb(236, 231, 231);
+    --temperature-color1: red;
     --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -30,7 +31,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--header-bkg-color);
-    width: 40em;
+    width: 45em;
     height: 7em;
 }
 
@@ -96,7 +97,7 @@
     align-items: right;
     justify-content: center;
     background-color: var(--w-body-color);
-    width: 40em;
+    width: 45em;
     height: 18em;
     border-right: .1em solid rgb(152, 154, 160);
 }
