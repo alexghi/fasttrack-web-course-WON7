@@ -1,0 +1,11 @@
+#tr,td,th {
+    border: 1px solid black;
+}
+
+#Fahrenheit{
+    margin-left: 1px;
+}
+
+#continut {
+    visibility: hidden; 
+}

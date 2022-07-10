@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <label for="fname">Select city:</label>
+    <input type="text" id="city" name="city">     <button id="Weather" onclick="showWeather()">Show Weather</button>
+    <div id="continut">
+     
+      <table>
+        <tr>
+            <th></th>
+            <th class="dayName"></th>
+            <th class="dayName"></th>
+            <th class="dayName"></th>
+            <th class="dayName"></th>
+            <th class="dayName"></th>
+            <th class="dayName"></th>
+            <th class="dayName"></th>
+        </tr>
+
+        <tr>
+            <td>Minim</td>
+            <td class="min"></td>
+            <td class="min"></td>
+            <td class="min"></td>
+            <td class="min"></td>
+            <td class="min"></td>
+            <td class="min"></td>
+            <td class="min"></td>
+        </tr>
+
+        <tr>
+            <td>Maxim</td>
+            <td class="max"></td>
+            <td class="max"></td>
+            <td class="max"></td>
+            <td class="max"></td>
+            <td class="max"></td>
+            <td class="max"></td>
+            <td class="max"></td>
+        </tr>
+
+      </table>
+      <button id="fButton" onclick="schimbareF()">Fahrenheit</button> 
+      <button id="cButton" onclick="schimbareC()"> Celsius</button>
+    </div>
+
+</body>
+</html>
