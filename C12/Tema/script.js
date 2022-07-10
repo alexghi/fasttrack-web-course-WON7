@@ -7,6 +7,7 @@ let unitate = "c";
 let continut = document.getElementById("continut");
 let cButton = document.getElementById("cButton");
 let fButton = document.getElementById("fButton");
+let poze = document.getElementsByClassName("poza");
 
  cButton.disabled=true;
 
@@ -18,6 +19,7 @@ function showWeather() {
         console.log(json);
         for(let i=0; i<7; i++){
             days[i].innerHTML = json.next_days[i].day;
+            poze[i].src = json.next_days[i].iconURL;
             if(unitate=="c"){
                 Minim[i].innerHTML =json.next_days[i].min_temp.c; 
                 Maxim[i].innerHTML = json.next_days[i].max_temp.c;
