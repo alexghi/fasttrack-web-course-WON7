@@ -1,0 +1,47 @@
+body {
+    background-image: url("./img/background-3268840_1920.jpg");
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin-top: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 15px;
+    border-style: double;
+
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    margin-left: 10%;
+}
+
+.right {
+    margin-left: 50%;
+    text-align: center;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.day {
+    border: 3px outset whitesmoke;
+    text-align: center;
+    margin: 10px;
+}
+
+.left {
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

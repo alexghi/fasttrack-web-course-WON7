@@ -1,0 +1,129 @@
+{
+    "region": "Oradea, Romania",
+    "currentConditions": {
+    "dayhour": "Monday 14:00 AM",
+    "temp": {
+    "c": 19,
+    "f": 66
+    },
+    "precip": "73%",
+    "humidity": "49%",
+    "wind": {
+    "km": 13,
+    "mile": 8
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+    "comment": "Sunny"
+    },
+    "next_days": [
+    {
+    "day": "Monday",
+    "comment": "Mostly sunny",
+    "max_temp": {
+    "c": 24,
+    "f": 75.2
+    },
+    "min_temp": {
+    "c": 13,
+    "f": 55.4
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+    },
+    {
+    "day": "Tuesday",
+    "comment": "Mostly sunny",
+    "max_temp": {
+    "c": 25,
+    "f": 77
+    },
+    "min_temp": {
+    "c": 10,
+    "f": 50
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+    },
+    {
+    "day": "Wednesday",
+    "comment": "Partly sunny",
+    "max_temp": {
+    "c": 28,
+    "f": 82.4
+    },
+    "min_temp": {
+    "c": 12,
+    "f": 53.6
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+    },
+    {
+    "day": "Thursday",
+    "comment": "Partly sunny",
+    "max_temp": {
+    "c": 32,
+    "f": 89.6
+    },
+    "min_temp": {
+    "c": 14,
+    "f": 57.2
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+    },
+    {
+    "day": "Friday",
+    "comment": "Partly sunny",
+    "max_temp": {
+    "c": 33,
+    "f": 91.4
+    },
+    "min_temp": {
+    "c": 18,
+    "f": 64.4
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+    },
+    {
+    "day": "Saturday",
+    "comment": "Showers",
+    "max_temp": {
+    "c": 31,
+    "f": 87.8
+    },
+    "min_temp": {
+    "c": 18,
+    "f": 64.4
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/rain.png"
+    },
+    {
+    "day": "Sunday",
+    "comment": "Mostly sunny",
+    "max_temp": {
+    "c": 28,
+    "f": 82.4
+    },
+    "min_temp": {
+    "c": 15,
+    "f": 59
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+    },
+    {
+    "day": "Monday",
+    "comment": "Mostly sunny",
+    "max_temp": {
+    "c": 31,
+    "f": 87.8
+    },
+    "min_temp": {
+    "c": 14,
+    "f": 57.2
+    },
+    "iconURL": "https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+    }
+    ],
+    "contact_author": {
+    "email": "communication.with.users@gmail.com",
+    "auth_note": "Mail me for feature requests, improvement, bug, help, ect... Please tell me if you want me to provide any other free easy-to-use API services"
+    },
+    "data_source": "https://www.google.com/search?lr=lang_en&q=weather+in+oradea"
+    }
