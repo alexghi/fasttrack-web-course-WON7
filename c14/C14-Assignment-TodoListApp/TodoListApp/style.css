@@ -1,0 +1,140 @@
+#logoID {
+    border-radius: 15px;
+    border: solid 3px black;
+    justify-content: center;
+    display: -moz-inline-grid;
+    margin-left: 150px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 3rem;
+}
+
+.container {
+    width: 60vw;
+    margin: 10rem auto;
+}
+
+#listInput,
+button {
+    border-radius: 15px;
+}
+
+#listInput,
+#listForm button {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: 2rem;
+
+}
+
+#listInput {
+    border: 1.5px solid rgba(0, 0, 75, 255);
+    transition: .3s box-shadow;
+}
+
+#listInput:focus {
+    outline: none;
+    border: 1px solid rgba(0, 0, 75, 255);
+    box-shadow: 0 0 5px 1px rgba(0, 225, 255, 255);
+}
+
+button {
+    cursor: pointer;
+}
+
+#list {
+    padding-top: 1.3rem;
+    margin: 0 auto;
+}
+
+#buttonContainer {
+    margin-top: .7rem;
+}
+
+#listForm button,
+#delete,
+#edit {
+    border: none;
+    color: #fff;
+}
+
+#listForm button,
+#edit {
+    background: rgba(0, 225, 255, 255);
+    border: 2px solid rgba(0, 0, 75, 255);
+}
+
+#delete {
+    background: green;
+    border: 2px solid rgba(0, 0, 75, 255)
+}
+
+li {
+    width: 100%;
+    list-style: none;
+}
+
+li span {
+    display: inline-block;
+    width: 90%;
+}
+
+#editInput {
+    width: 90%;
+    padding: .7rem;
+}
+
+li,
+#delete,
+#edit {
+    padding: .7rem;
+}
+
+li input,
+#delete {
+    margin-right: .3rem;
+}
+
+.completed {
+    color: #bbb;
+    position: relative;
+    text-decoration: line-through;
+}
+
+.text {
+    color: rgba(0, 0, 75, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+    font-size: large;
+    font-size: 25px;
+
+
+
+}
+
+.main-heading {
+    background-color: rgba(0, 225, 255, 255);
+    color: rgba(0, 0, 75, 255);
+    border-radius: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-variant: small-caps;
+    font-size: 50px;
+    border: 3px solid rgba(0, 0, 75, 255);
+
+
+}
