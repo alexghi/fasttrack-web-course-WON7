@@ -18,14 +18,28 @@ async function loadWeather() {
   window.weatherData = data;
   // =================  HEADER
         const location = data.region;
-        console.log(location);
         document.getElementById(
             "w-header-l-b"
         ).innerHTML = `${data.region}, 47° 04' 0.01" N 21° 55' 59.99" E`;
-        const currentTemp = data.currentConditions.temp.c;
-        document.getElementById("w-header-r-t").innerHTML = `${currentTemp} ºC`;
+
+        var currentImg = document.createElement('img');
+        currentImg.src = data.currentConditions.iconURL;
+        currentImg.alt = "missing pic";
+        currentImg.setAttribute('id', 'current-imgg');
+        currentImg.setAttribute('style', 'background-color: inherit; width: 40px; height: 40px;')
+        document.getElementById('w-header-r-t').appendChild(currentImg); 
+
+        var currentTempDiv = document.createElement('div');
+        currentTempDiv.setAttribute('id', 'current-temp');
+        currentTempDiv.setAttribute('style', 'background-color:inherit; padding-left: 15px;')
+        currentTempDiv.innerHTML = `${data.currentConditions.temp.c} ºC`;
+        document.getElementById('w-header-r-t').appendChild(currentTempDiv);
+
+        
         const currentTime = data.currentConditions.dayhour;
-        document.getElementById("w-header-r-b").innerHTML = `${currentTime}`;
+        document.getElementById('w-header-r-b').innerHTML = `${currentTime}`;
+
+       
 
   // ================= BODY
         for (var i = 0; i < data.next_days.length; i++) {
@@ -86,29 +100,34 @@ async function loadWeather() {
             var dateDiv = document.createElement("div");
             dateDiv.setAttribute("id", `w-date-${i}`);
             dateDiv.setAttribute("style", "padding-top:5px;");
-            if (dayName == data.next_days[0].day) {
-            dateDiv.innerHTML = `Today`;
+            if (dayName == data.next_days[0].day && increment===0 ) {
+              console.log(dayName)
+               dateDiv.innerHTML = 'Today';
             } else if (dayName == data.next_days[1].day) {
-            dateDiv.innerHTML = `Tomorrow`;
+               dateDiv.innerHTML = 'Tomorrow';
+            } else if (dayName == data.next_days[7].day) {
+              dateDiv.innerHTML = `${currentMonth} - ${incrementedDays}`;
             } else {
-            dateDiv.innerHTML = `${currentMonth} - ${incrementedDays}`;
+                dateDiv.innerHTML = `${currentMonth} - ${incrementedDays}`;
             }
             document.getElementById(`w-day-${i}`).appendChild(dateDiv);
-
+                console.log(data.next_days.indexOf(data.next_days[0]))
             // IMAGES
             var img = document.createElement("img");
             img.src = imageURL;
-            console.log(img.src);
+              console.log(img.src);
             img.alt = "missing pic";
-            img.setAttribute("id", `w-icon-${i}`);
+            img.setAttribute('id', `w-icon-${i}`, 'style', 'width: 45em;');
+            
             document.getElementById(`w-day-${i}`).appendChild(img);
 
             // MAX TEMPERATURE
             var maxTempDiv = document.createElement("div");
             maxTempDiv.setAttribute("id", `w-maxTemp-${i}`);
+            maxTempDiv.setAttribute("class", 'celsius');
             maxTempDiv.innerHTML = `${maxTempC}ºC`;
             if (maxTempC >= 30) {
-            maxTempDiv.setAttribute("style", "background-color: #ffff00");
+            maxTempDiv.setAttribute("style", "background-color: #ffff00;");
             } else if (maxTempC >= 25 && maxTempC <= 29) {
             maxTempDiv.setAttribute("style", "background-color: #ffffb3");
             } else if (maxTempC >= 20 && maxTempC <= 24) {
@@ -129,6 +148,44 @@ async function loadWeather() {
             maxTempDiv.setAttribute("style", "background-color: #00cccc");
             }
             document.getElementById(`w-day-${i}`).appendChild(maxTempDiv);
+            maxTempDiv.style.visibility = 'visible';
+                // MAX TEMPERATURE FAHRENHEIT
+                var maxTempFahrenheitDiv = document.createElement("div");
+                maxTempFahrenheitDiv.setAttribute("id", `w-maxTemp-${i}`);
+                maxTempFahrenheitDiv.setAttribute('class', 'fahrenheit');
+                maxTempFahrenheitDiv.innerHTML = `${maxTempF}ºF`;
+                if (maxTempF >= 30) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #ffff00;");
+                } else if (maxTempF >= 25 && maxTempF <= 29) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #ffffb3;");
+                } else if (maxTempF >= 20 && maxTempF <= 24) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #ffffe6;");
+                } else if ((maxTempF >= 15) & (maxTempF <= 19)) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #00cc41;");
+                } else if ((maxTempF >= 10) & (maxTempF <= 14)) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #80ffa8;");
+                } else if ((maxTempF >= 5) & (maxTempF <= 9)) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #e6ffee;");
+                } else if ((maxTempF >= 1) & (maxTempF <= 4)) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #99ffdd; display:none");
+                } else if ((maxTempF = 0 & (maxTempF >= -5))) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #e6ffff;");
+                } else if ((maxTempF <= -6) & (maxTempF >= -10)) {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #66ffff;");
+                } else {
+                  maxTempFahrenheitDiv.setAttribute("style", "background-color: #00cccc;");
+                }
+                // document.getElementById(`w-day-${i}`).appendChild(maxTempFahrenheitDiv);
+                maxTempFahrenheitDiv.style.visibility = 'hidden';
+                window.maxTempFahrenheitDiv;
+
+                // const toggleTemperature = () => {
+                //  var far = document.getElementById(`w-day-${i}`).appendChild(maxTempFahrenheitDiv) = true;
+                //  far == true;
+                //  console.log(far)
+                //  return far
+                // }
+                
 
             // MIN TEMPERATURE
             var minTempDiv = document.createElement("div");
@@ -164,33 +221,122 @@ async function loadWeather() {
 }
 loadWeather();
 
-//===
-console.log(weatherData)
-var C = weatherData.next_days[i].max_temp.c;
-  console.log(C);
-  console.log(weatherData.next_days[1].max_temp.c);
-var F = weatherData.next_days[i].max_temp.f;
-  console.log(F);
-  console.log(weatherData.next_days[1].max_temp.c);
-// var unit = C;
+const toggleTemperature = () => {
+  for (var i = 0; i < weatherData.next_days.length; i++) {
+  
+    var maxTempFahrenheitDiv = document.createElement('div');
+    maxTempFahrenheitDiv.setAttribute("id", `w-maxTemp-${i}`);
+    maxTempFahrenheitDiv.setAttribute('class', 'fahrenheit');
+    maxTempFahrenheitDiv.innerHTML = `${weatherData.next_days[i].max_temp.f}ºF`;;
+    document.getElementById(`w-day-${i}`).appendChild(maxTempFahrenheitDiv);
+    // return maxTempFahrenheitDiv  
+    
 
-toggleMeasurementUnit = () => {
-  measurementUnit === C ? (measurementUnit = F) : (measurementUnit = C);
-  generateForecast();
-  return measurementUnit;
-};
-
-generateForecast = () => {
-  for(i = 0; i < weatherData.next_days.length; i++) {
-    console.log(weatherData.next_days[i].max_temp.c)
+    var maxTempDiv = document.createElement("div");
+    // document.getElementById(`w-day-${i}`).removeChild(maxTempDiv);
+    maxTempDiv.style.visibility = 'hidden';
+    
+  
+    // maxTempDiv.setAttribute("id", `w-maxTemp-${i}`);
+    // maxTempDiv.setAttribute("class", 'celsius');
+    // document.getElementById(`w-day-${i}`).appendChild(maxTempDiv);
+    // maxTempDiv.style.visibility = 'hidden';
   }
+ }
+
+
+
+ function toggleTemperature () {
+  const tT = document.getElementById('CFbutton');
+  const temp = document.querySelectorAll('fahrenheit');
+  toggleTemperature.addEventListener("click", function () {
+    for (let i = 0; i < temp.length; i++) {
+      if (temp[i].classList.contains("hidden")) {
+        temp[i].classList.remove("hidden");
+      } else {
+        temp[i].classList.add("hidden");
+      }
+    }
+  });
 };
 
-var measure = weatherData.next_days[i].max_temp[0];
-measure.forEach(function (item) {
-    console.log(item)
-})
-console.log(measure.forEach)
+
+
+
+ 
+// const toggleTemperature = () => {
+//   window.weatherData.next_days[i];
+//   var result = document.getElementById(`w-day-${i}`).appendChild(maxTempFahrenheitDiv);
+//   result = true;
+//   return result
+// }
+// toggleTemperature()
+
+// document.getElementById("CFbutton")
+//         .addEventListener("click", function() {
+//   for (var i = 0; i < weatherData.next_days.length; i++) {
+    
+//                 const result = document.getElementById(`w-day-${i}`).appendChild(maxTempFahrenheitDiv) = true;
+//                 result.style.visibility = 'visible'
+//                 return result;
+//                 maxTempFahrenheitDiv.style.visibility = 'hidden';
+//                 window.maxTempFahrenheitDiv;
+//     document.getElementById(`w-day-${i}`).appendChild(maxTempFahrenheitDiv) = true;
+//     maxTempFahrenheitDiv.style.visibility = 'visible';
+//     maxTempDiv.style.visibility = 'hidden';
+  
+//     document.getElementById(`w-day-${i}`).appendChild(maxTempFahrenheitDiv) = false;
+//     maxTempFahrenheitDiv.style.visibility = 'hidden';
+  
+//   }
+// }, false);
+
+
+// const F = document.getElementsByClassName('fahrenheit');
+// console.log(F)
+// const C = document.getElementsByClassName('celsius');
+// console.log(C.style)
+// console.log(F.style.visibility)
+// function toggleTemperature() {
+//   if(F.style.visibility = 'hidden') {
+//     F.style.visibility = 'visible';
+//     C.style.visibility = 'hidden'
+//   } else {
+//     F.style.visibility = 'hidden';
+//     C.style.visibility = 'visible';
+//   }
+// }
+// console.log(toggleTemperature());
+
+
+
+//===
+// console.log(weatherData)
+// var C = weatherData.next_days[i].max_temp.c;
+//   console.log(C);
+//   console.log(weatherData.next_days[1].max_temp.c);
+// var F = weatherData.next_days[i].max_temp.f;
+//   console.log(F);
+//   console.log(weatherData.next_days[1].max_temp.c);
+// // var unit = C;
+
+// toggleMeasurementUnit = () => {
+//   measurementUnit === C ? (measurementUnit = F) : (measurementUnit = C);
+//   generateForecast();
+//   return measurementUnit;
+// };
+
+// generateForecast = () => {
+//   for(i = 0; i < weatherData.next_days.length; i++) {
+//     console.log(weatherData.next_days[i].max_temp.c)
+//   }
+// };
+
+// var measure = weatherData.next_days[i].max_temp[0];
+// measure.forEach(function (item) {
+//     console.log(item)
+// })
+// console.log(measure.forEach)
 
 
 //=== A

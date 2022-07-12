@@ -27,6 +27,8 @@ async function loadNasaImages( ) {
         } else if(inputEnd.length == 0) {
             inputError = 'Introdu data finală!';
         } else{
+            // document.getElementById('nasa-images').children;
+            // debugger
             for(var i = 0; i < data.length; i++) {
                 var image = data[i];
                     console.log(image)
