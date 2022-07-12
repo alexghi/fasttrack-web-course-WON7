@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_USER: 'fasttrack_user'
+      MYSQL_PASSWORD: 'fasttrack_pass'
+      MYSQL_ROOT_PASSWORD: 'fasttrack_pass'
+    ports:
+      - 3306:3306

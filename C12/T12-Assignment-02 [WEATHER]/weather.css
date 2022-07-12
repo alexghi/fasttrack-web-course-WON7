@@ -60,6 +60,7 @@
     font: var(--font);
     font-size: 0.5em;
     font-weight: 700;
+    margin-top: .5em;
 }
 
 #w-header-r {
@@ -72,6 +73,8 @@
 }
 
 #w-header-r-t {
+    display: flex;
+    flex-direction: row;
     margin-right: 0.1em;
     color: var(--font-color1);
     background-color: var(--header-bkg-color);
@@ -88,6 +91,7 @@
     font-size: 0.5em;
     font-weight: 700;
     text-align: right;
+    margin-top: .5em;
 }
 
 
@@ -98,7 +102,7 @@
     justify-content: center;
     background-color: var(--w-body-color);
     width: 45em;
-    height: 18em;
+    height: fit-content;
     border-right: .1em solid rgb(152, 154, 160);
 }
 
