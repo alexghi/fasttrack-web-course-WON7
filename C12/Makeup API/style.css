@@ -1,0 +1,17 @@
+.tabel {
+    height: 50%;
+    width: 85%;
+    border: 1px solid black;
+    margin: auto;
+}
+.tr, td, th {
+    border: 1px solid black;
+}
+
+.tr ,td , th > descriere{
+    width: 25%;
+}
+ 
+.tr ,td , th > pret {
+    text-align: center;
+}
