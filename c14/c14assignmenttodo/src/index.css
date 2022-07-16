@@ -12,7 +12,12 @@ code {
     monospace;
 }
 
-.welcomeRoot {
-  display: flex;
+.todo {
+  display:flex;
   flex-direction: column;
+  align-items: center;
+  color:rgb(80, 30, 30);
+  background-color: rgb(221, 210, 210);
+  font-weight: bolder;
+  font-size: 2em;
 }

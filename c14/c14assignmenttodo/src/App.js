@@ -18,12 +18,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <div>
-        something else
-      </div>
-      <div>
-        <span>here is your span</span>
-      </div>
     </div>
   );
 }
