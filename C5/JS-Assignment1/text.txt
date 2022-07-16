@@ -1,0 +1,154 @@
+$ git branch
+* master
+
+
+$ git checkout -b EmilMacarie
+Switched to a new branch 'EmilMacarie'
+
+
+$ git branch
+* EmilMacarie
+  master
+
+
+$ ls
+C1/  C2/  C3/  C4/  C5/  LICENSE
+
+
+$ cd C5
+
+
+$ mkdir JS-Assignment1
+
+
+$ cd JS-Assignment1/
+
+
+$ ls
+
+
+$ pwd
+/fasttrack-web-course-WON7/C5/JS-Assignment1
+
+
+$ mkdir mate-info
+
+
+$ ls
+mate-info/
+
+
+$ cd mate-info/
+
+
+$ mkdir semestrul1
+
+
+$ cd semestrul1/
+
+
+$ touch studenti.txt
+
+
+$ ls
+studenti.txt
+
+
+$ cd ..
+
+
+$ pwd
+/fasttrack-web-course-WON7/C5/JS-Assignment1/mate-info
+
+
+$ mkdir semestrul2
+
+
+$ ls
+semestrul1/  semestrul2/
+
+
+$ cd semestrul2
+
+
+$ touch studenti.txt
+
+
+$ cd ..
+
+$ cd..
+
+$ cd ..
+
+$ pwd
+/fasttrack-web-course-WON7/C5/JS-Assignment1
+
+$ mkdir facultate
+
+$ ls
+facultate/  mate-info/
+
+$ git mv mate-info facultate
+fatal: source directory is empty, source=C5/JS-Assignment1/mate-info, destination=C5/JS-Assignment1/facultate/mate-info
+
+
+$ mv mate-info facultate
+
+$ ls
+facultate/
+
+$ cd facultate/
+
+$ ls
+mate-info/
+
+$ mkdir engleza
+
+$ ls
+engleza/  mate-info/
+
+$ cd engleza/
+
+$ mkdir semestrul1
+
+$ cd semestrul1/
+
+$ mkdir intensiv
+
+$ cd intensiv/
+
+$ touch olimpici.txt
+
+$ ls
+olimpici.txt
+
+$ cd ..
+
+$ pwd
+/fasttrack-web-course-WON7/C5/JS-Assignment1/facultate/engleza/semestrul1
+
+$ ls
+intensiv/
+
+$ touch studenti.txt
+
+$ cd ..
+
+$ mkdir semestrul2
+
+$ cd semestrul2
+
+$ touch studenti.txt
+
+$ ls
+studenti.txt
+
+$ cd ..
+
+$ ls
+semestrul1/  semestrul2/
+
+$ touch text.txt
+
+$ ls
+facultate/  text.txt

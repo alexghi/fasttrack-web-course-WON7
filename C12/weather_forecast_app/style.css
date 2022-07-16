@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	color: #666;
+	font-family: 'Oxygen', san-serif;
+}
+ 
+h2 {
+	display: flex;
+	font-size: 0.7em;
+	margin-bottom: 1em;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+h3 {
+	padding: 0.3em 0;
+}
+p, h3 {
+	font-size: 0.7em;
+}
+
+/*************** 
+ Layout
+****************/
+.cloud-image {
+	display: flex;
+	top: 20px; 
+	width: 50px;
+	height:50px;
+}
+
+.weather {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+}
+.section {
+	display: flex;
+	align-items: flex-end;
+    margin: 1em 10px 1em 0;
+    padding: 1em 1em 2em 1em;
+    background: #FCFAFA;
+	
+}
+.info{
+	margin: 10px;
+}
+.initial{
+	display: flex;
+	align-items: center;
+}
+
+/*************** 
+ Page Classes
+****************/
+.wrapper  {
+	width: 100%;
+}
+.container {
+	text-align: center;
+}
+.results {
+	font-size: 2em;
+	margin-top: 1em;
+}
+/*************** 
+Form Class/Elments 
+****************/
+
+.button {
+	background: #AA6339;
+	color: #fff;
+	outline: none;
+	padding: 10px 20px;
+	margin: 0 8px;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s all;
+	
+}
+.button:hover {
+	background: #803D15;
+}
+
+input[type=text] {
+	border: solid 2px #AA6339;
+	min-width: 220px;
+	padding: 8px 10px;
+  margin-bottom: 1em;
+	outline: none;
+	transition: 0.7s all;
+}
+input[type=text]:focus {
+	border: solid 2px #803D15;
+}
+
+/*************** 
+Layout Fixes 
+****************/
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+.fixed {
+    position: fixed;
+    font-size: 2em;
+    top: 45vh;
+    display: block;
+    width: 100%;
+    left: 0;
+}
+
+/*----- Placehoder Hack -----*/
+
+input::-webkit-input-placeholder {
+	font-style: normal;
+	font-weight: 300;
+	text-align: left;
+	font-size: 12px;
+	color: #A6A6A6;
+}
+input::-moz-placeholder {
+	font-style: normal;
+	font-weight: 300;
+	text-align: left;
+	font-size: 12px;
+	color: #A6A6A6;
+}
+input:-moz-placeholder {
+	font-style: normal;
+	font-weight: 300;
+	text-align: left;
+	font-size: 12px;
+	color: #A6A6A6;
+}
+input:-ms-input-placeholder {
+	font-style: normal;
+	font-weight: 300;
+	text-align: left;
+	font-size: 12px;
+	color: #A6A6A6;
+}

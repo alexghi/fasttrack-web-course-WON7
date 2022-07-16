@@ -14,6 +14,7 @@ in al doilea parametru
 setInterval, se apeleaza la fiecare ms
 */
 
+<<<<<<< HEAD
 setInterval(() => {
 	d = new Date(); //object of date()
 	hr = d.getHours();
@@ -41,3 +42,25 @@ function startStopWatch() {
     console.log(document.getElementById("number").value);
     console.log(number);
   }
+=======
+const minHand = document.querySelector(".min");
+const secHand = document.querySelector(".sec");
+const hourHand = document.querySelector(".hour");
+
+function clock() {
+    const date = new Date();
+    const secDeg = (date.getSeconds() / 60) * 360 - 90;
+    const minDeg = (date.getMinutes() / 60) * 360 - 90;
+    const hourDeg = (date.getHours() / 12) * 360 - 90;
+    secHand.style.transform = `rotate(${secDeg}deg)`;
+    minHand.style.transform = `rotate(${minDeg}deg)`;
+    hourHand.style.transform = `rotate(${hourDeg}deg)`;
+  }
+
+setInterval(clock, 1000);
+
+clock()
+
+// functiile din acest fisier se pot inlocui cu cele pe care le veti face voi
+// sunt doar ca sa aveti cateva lucruri de la care sa porniti
+>>>>>>> 7a1799ff2b8c165459614750083ad9699429a4fd

@@ -7,7 +7,7 @@
     <title>Change the content of a cell</title>
   </head>
   <body>
-    <table id="myTable" border="1">
+    <table id="myTable" border ="1">
       <tr>
         <td>Row1 cell1</td>
         <td>Row1 cell2</td>
@@ -25,5 +25,14 @@
       <input type="button" onclick="changeContent()" value="Change content" />
       <script src="./exercise_6.js"></script>
     </form>
+  <script>
+    function changeContent () {
+      rn = window.prompt ("Input the Row number(0,1,2)", '0');
+      cn = windows.prompt ("Input the Column number(0,1)", "0");
+      content = window.prompt ("Input the Cell content");
+      var x = document.getElementById ("myTable").rows[parseInt(rn,10)].cells
+      x[parseInt(cn,10)].innerHTML=content;
+    }
+  </script>
   </body>
 </html>

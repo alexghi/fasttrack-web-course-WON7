@@ -19,6 +19,17 @@
     </table>
     <br />
     <input type="button" onclick="insert_Row()" value="Insert row" />
+    <script>
+      function insert_Row () {
+        const table = document.getElementById("sampleTable");
+        const row = table.insertRow(0);
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+
+        cell1.innerHTML = "NEW CELL1";
+        cell2.innerHTML = "NEW CELL2";
+      }
+    </script>
   </body>
   <script src="./exercise_5.js"></script>
 </html>
