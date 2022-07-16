@@ -12,8 +12,7 @@ let poze = document.getElementsByClassName("poza");
  cButton.disabled=true;
 
 function showWeather() {
-
-    fetch("https://weatherdbi.herokuapp.com/data/weather/london")
+    fetch("https://weatherdbi.herokuapp.com/data/weather/" + city.value)
     .then(res=>res.json())
     .then(json=>{
         console.log(json);
