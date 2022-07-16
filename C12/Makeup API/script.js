@@ -13,14 +13,42 @@ let pret2 = document.getElementsByClassName("pret2");
 let poza2 = document.getElementsByClassName("poza2");
 let descriere2 = document.getElementsByClassName("descriere2");
 
+let brands = ["maybelline", "NYX", "Dior"];
+let produse = [produs, produs1, produs2];
+let preturi = [pret, pret1, pret2];
+let poze = [poza, poza1, poza2];
+let descrieri = [descriere, descriere1, descriere2];
 
+
+function getDataFromAPI() {
+    for(let i=0; i<3; i++) {
+        fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=" + brands[i])
+        .then(res=>res.json())
+        .then(json=>{
+            console.log(json); 
+            for(let j=0; j<4; j++) {
+                produse[i][j].innerHTML = json[j].name;
+                preturi[i][j].innerHTML = json[j].price;
+                preturi[i][j].href = json[j].product_link;
+                poze[i][j].src = json[j].image_link;
+                descrieri[i][j].innerHTML = json[j].description;
+            }
+        })
+    }
+}
+
+
+
+
+
+/*
 function getDataFromAPI() {
     Maybelline();
     NYX();
     Dior();
 }
 
-function Maybelline() {
+ function Maybelline() {
     fetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
     .then(res=>res.json())
     .then(json=>{
@@ -75,3 +103,4 @@ function Dior() {
         }
     })
 }
+*/
