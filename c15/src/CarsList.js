@@ -2,7 +2,7 @@ import React from 'react';
 import Car from './Car';
 
 const CarsList = (props) => {
-    const cars = props.cars;
+    const { cars } = props;
 
     return (
         <div className="cars-list">

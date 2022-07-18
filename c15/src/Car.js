@@ -1,10 +1,15 @@
 import React from 'react';
 
+const carColors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
+
 const Car = (props) => {
+    const { brand, model, year } = props.car
+
     return <div>
-        <h3>{props.car.brand}</h3>
-        <p>{props.car.model}</p>
-        <p>{props.car.year}</p>
+        <h3>{brand}</h3>
+        <p>{model}</p>
+        <p>{year}</p>
+
     </div>
 }
 

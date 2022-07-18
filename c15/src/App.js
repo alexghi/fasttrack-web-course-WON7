@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import CarsList from './CarsList';
+import Counter from './Counter';
+import Details from './Details';
+import FreshCounter from './FreshCounter';
 
 const carsList = [
   {
@@ -32,7 +35,28 @@ const carsList = [
 
 function App() {
   return (
-    <CarsList cars={carsList}/>
+    <>
+      {/* <CarsList cars={carsList}/> */}
+      {/* <Counter student={{
+        name:'Ema',
+        age: 25,
+        details: {
+          grade: 'A',
+          school: 'School of Code',
+          address: '123 Main St.'
+        }
+      }}/> */}
+      {/* <FreshCounter student={{
+        name:'Ema',
+        age: 25,
+        details: {
+          grade: 'A',
+          school: 'School of Code',
+          address: '123 Main St.'
+        }
+      }}/> */}
+      <Details/>
+    </>
   );
 }
 
