@@ -1,0 +1,18 @@
+.brand{
+    font-size: 25px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 2px;
+}
+.makeUpName{
+    font-style: italic;
+    font-size: 16px;
+}
+.container a {
+    text-decoration: none;
+    color: black;
+}
+.brandName{
+    text-transform: capitalize;
+}
