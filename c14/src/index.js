@@ -12,7 +12,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
     {/* <Welcome /> */}
-    <MyComponent show={true}/>
     <TodoList/>
   </div>
 
