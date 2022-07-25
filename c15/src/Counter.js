@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class Counter extends React.Component {
+class Counter extends Component {
     constructor(props) {
         super(props);
 
