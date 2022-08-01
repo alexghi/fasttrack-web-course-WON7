@@ -1,42 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import CarsList from './CarsList';
+import CarsInService from './CarsInService';
 import Counter from './Counter';
 import Details from './Details';
 import FreshCounter from './FreshCounter';
+import React, { useState } from 'react';
+import { findCarByBrand } from './data/cars';
 
-const carsList = [
-  {
-    brand: 'Ford',
-    year: '2000',
-    model: 'Focus'
-  },
-  {
-    brand: 'Chevrolet',
-    year: '2010',
-    model: 'Corvette'
-  },
-  {
-    brand: 'Volvo',
-    year: '2012',
-    model: 'V70'
-  },
-  {
-    brand: 'BMW',
-    year: '2015',
-    model: 'X5'
-  },
-  {
-    brand: 'Mercedes',
-    year: '2017',
-    model: 'C-Class'
-  }
-];
+const initialCar = findCarByBrand('Ford');
 
 function App() {
+  const [selectedCar, setSelectedCar] = useState(initialCar);
+
   return (
     <>
-      {/* <CarsList cars={carsList}/> */}
+      <CarsList currentCar={selectedCar} setSelectedCar={setSelectedCar}/>
+      <CarsInService currentCar={selectedCar}/>
       {/* <Counter student={{
         name:'Ema',
         age: 25,
@@ -55,7 +35,7 @@ function App() {
           address: '123 Main St.'
         }
       }}/> */}
-      <Details/>
+      {/* <Details/> */}
     </>
   );
 }

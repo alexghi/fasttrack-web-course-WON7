@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const carColors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
+const carColors = ["red", "green", "blue", "yellow", "orange", "purple"];
 
-const Car = (props) => {
-    const { brand, model, year } = props.car
-
-    return <div>
-        <h3>{brand}</h3>
-        <p>{model}</p>
-        <p>{year}</p>
-
+const Car = ({ car: { brand, model, year }, onSelectCar }) => {
+  return (
+    <div
+      onClick={() => onSelectCar(brand)}
+      style={{ boxShadow: "2px 1px 3px #eee", padding: "10px" }}
+    >
+      <h3>{brand}</h3>
+      <p>{model}</p>
+      <p>{year}</p>
     </div>
-}
+  );
+};
 
-export default Car
+export default Car;
